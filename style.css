@@ -1,0 +1,315 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1vw;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.s1, .s2, .s3, .s4 {
+  background-image: linear-gradient(to right, #fad0c4 0%, #ffd1ff 100%);
+  background-size: cover;
+  display: grid;
+  height: 100vh;
+}
+
+.panel {
+  background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 100%);
+  backdrop-filter: blur(6px);
+  border-radius: 60px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 60px;
+  box-shadow: rgba(255, 255, 255, 0.5) -20px -20px 45px inset, rgba(0, 0, 0, 0.1) 10px 10px 20px, rgba(0, 0, 0, 0.06) 5px 5px 10px;
+  position: relative;
+}
+
+.btn-grad {
+  background-image: linear-gradient(to right, #000428 0%, #004e92 51%, #000428 100%);
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.btn-grad:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.s1, .s2, .s3, .s4 {
+  grid-template-columns: 1fr  1fr;
+  grid-template-rows: 10vh 1fr 10vh;
+}
+
+.s1 .logo {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  padding-left: 2vw;
+}
+
+.s1 .logo p {
+  font-size: 3.5vw;
+  font-weight: 600;
+  background: linear-gradient(to right, #E8D07A 0%, #5312D6 30%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.s1 .logo span {
+  background: linear-gradient(to right, #E8D07A 0%, #5312D6 30%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.s1 img {
+  grid-row: 1/3;
+  grid-column: 2/3;
+  width: 100%;
+  height: 100%;
+  border-bottom-left-radius: 300px;
+  z-index: 0;
+}
+
+.s1 h1 {
+  grid-row: 2/3;
+  grid-column: 1/2;
+  font-size: 3.5vw;
+  font-weight: 900;
+  z-index: 1;
+  padding-top: 16vh;
+  padding-left: 6vw;
+  background: linear-gradient(to right, #000428 0%, #004e92 51%, #000428 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.circle {
+  position: relative;
+  z-index: 0;
+  width: 40%;
+  height: 40%;
+  border-radius: 80%;
+  background-image: linear-gradient(135deg, #E8D07A 10%, #5312D6 100%);
+}
+
+.circle-one {
+  grid-row: 2/3;
+  grid-column: 1/2;
+  position: relative;
+  top: 35%;
+  left: -30%;
+  z-index: 0;
+  width: 80%;
+  height: 80%;
+  border-radius: 80%;
+  background-image: linear-gradient(135deg, #E8D07A 10%, #5312D6 100%);
+}
+
+.circle-two {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  position: relative;
+  top: 5%;
+  left: 0%;
+  z-index: 0;
+  width: 40%;
+  height: 40%;
+  border-radius: 60%;
+  background-image: linear-gradient(135deg, #E8D07A 10%, #5312D6 100%);
+}
+
+.circle-three {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  z-index: 0;
+  width: 70%;
+  height: 70%;
+  border-radius: 70%;
+  background-image: linear-gradient(35deg, #E8D07A 10%, #5312D6 100%);
+}
+
+.second-background {
+  grid-row: 2/4;
+  grid-column: 2/3;
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 300px;
+}
+
+.s1 .panel {
+  margin-top: 15vh;
+  margin-left: 5vw;
+  grid-row: 2/3;
+  grid-column: 2/3;
+  width: 40vw;
+  height: 50vh;
+}
+
+.s1 .panel img {
+  width: 40%;
+  height: 80%;
+  float: right;
+  border-radius: 20px;
+}
+
+.s1 .panel .btn-grad {
+  float: right;
+}
+
+.s2 .circle {
+  grid-row: 2/3;
+  grid-column: 1/2;
+  top: 45%;
+  left: 5%;
+}
+
+.s2 h1 {
+  grid-row: 2/3;
+  grid-column: 1/2;
+  font-size: 3.5vw;
+  font-weight: 900;
+  padding-top: 10vh;
+  padding-left: 6vw;
+  background: linear-gradient(to right, #000428 0%, #004e92 51%, #000428 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.description {
+  grid-row: 2/3;
+  grid-column: 1/2;
+  margin-top: 20vw;
+  width: 80%;
+  margin-left: 6vw;
+  z-index: 2;
+}
+
+.s2 img {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  width: 100%;
+  height: 80%;
+}
+
+.s3 .circle {
+  grid-row: 2/3;
+  grid-column: 1/2;
+  top: 45%;
+  left: 5%;
+}
+
+.s3 h1 {
+  grid-row: 2/3;
+  grid-column: 1/2;
+  font-size: 3.5vw;
+  font-weight: 900;
+  padding-top: 10vh;
+  padding-left: 6vw;
+  background: linear-gradient(to right, #000428 0%, #004e92 51%, #000428 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.s3 img {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  width: 70%;
+  height: 90%;
+  margin-left: 10vw;
+}
+
+.s4 .circle {
+  grid-row: 2/4;
+  grid-column: 1/2;
+  top: 45%;
+  left: 5%;
+}
+
+.s4 h1 {
+  grid-row: 2/4;
+  grid-column: 1/3;
+  font-size: 3.5vw;
+  font-weight: 900;
+  padding-top: 0vh;
+  padding-left: 6vw;
+  background: linear-gradient(to right, #000428 0%, #004e92 51%, #000428 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.circle-s4-one {
+  grid-row: 2/4;
+  grid-column: 1/2;
+  top: 60%;
+  left: 45%;
+  position: relative;
+  z-index: 0;
+  width: 50%;
+  height: 50%;
+  border-radius: 80%;
+  background-image: linear-gradient(135deg, #E8D07A 10%, #5312D6 100%);
+}
+
+.circle-s4-two {
+  grid-row: 2/4;
+  grid-column: 1/2;
+  top: 30%;
+  left: 85%;
+  position: relative;
+  z-index: 0;
+  width: 40%;
+  height: 40%;
+  border-radius: 60%;
+  background-image: linear-gradient(135deg, #E8D07A 10%, #5312D6 100%);
+}
+
+.circle-s4-three {
+  grid-row: 2/4;
+  grid-column: 2/3;
+  top: 40%;
+  left: 40%;
+  position: relative;
+  z-index: 0;
+  width: 60%;
+  height: 60%;
+  border-radius: 80%;
+  background-image: linear-gradient(135deg, #E8D07A 10%, #5312D6 100%);
+}
+
+.s4 .panel {
+  left: 10%;
+  top: 25%;
+  grid-row: 2/4;
+  grid-column: 1/3;
+  width: 20vw;
+  height: 55vh;
+  padding: 0;
+}
+
+.s4 .panel img {
+  width: 60%;
+  border-radius: 60px;
+}
+
+.s4 .panel .btn-grad {
+  float: right;
+  margin-right: 6vw;
+}
