@@ -16,6 +16,16 @@ body {
   height: 100vh;
 }
 
+.panel-background {
+  background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 100%);
+  backdrop-filter: blur(40px);
+  box-shadow: rgba(255, 255, 255, 0.5) -20px -20px 45px inset, rgba(0, 0, 0, 0.1) 10px 10px 20px, rgba(0, 0, 0, 0.06) 5px 5px 10px;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
 .panel {
   background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 100%);
   backdrop-filter: blur(6px);
@@ -28,7 +38,7 @@ body {
 }
 
 .btn-grad {
-  background-image: linear-gradient(to right, #000428 0%, #004e92 51%, #000428 100%);
+  background-image: linear-gradient(to right, #000000 0%, #434343 51%, #000000 100%);
   margin: 10px;
   padding: 15px 45px;
   text-align: center;
@@ -38,8 +48,9 @@ body {
   background-size: 200% auto;
   color: white;
   box-shadow: 0 0 20px #eee;
-  border-radius: 20px;
-  display: inline-block;
+  border-radius: 30px;
+  width: 20%;
+  height: 8%;
 }
 
 .btn-grad:hover {
@@ -47,6 +58,16 @@ body {
   /* change the direction of the change here */
   color: #fff;
   text-decoration: none;
+}
+
+.btn-grad-light {
+  float: right;
+  margin-top: 3vw;
+  text-decoration: none;
+  font-weight: 600;
+  background: linear-gradient(135deg, #E8D07A -10%, #5312D6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .s1, .s2, .s3, .s4 {
@@ -57,19 +78,20 @@ body {
 .s1 .logo {
   grid-row: 1/2;
   grid-column: 1/2;
+  z-index: 1;
   padding-left: 2vw;
 }
 
 .s1 .logo p {
   font-size: 3.5vw;
   font-weight: 600;
-  background: linear-gradient(to right, #E8D07A 0%, #5312D6 30%);
+  background: linear-gradient(to right, #000428 0%, #004e92 51%, #000428 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .s1 .logo span {
-  background: linear-gradient(to right, #E8D07A 0%, #5312D6 30%);
+  background: linear-gradient(to right, #000428 0%, #004e92 51%, #000428 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -89,11 +111,31 @@ body {
   font-size: 3.5vw;
   font-weight: 900;
   z-index: 1;
-  padding-top: 16vh;
-  padding-left: 6vw;
-  background: linear-gradient(to right, #000428 0%, #004e92 51%, #000428 100%);
+  margin-top: 16vh;
+  margin-left: 8vw;
+  background: black;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.s1 h2 {
+  grid-row: 2/3;
+  grid-column: 1/2;
+  font-weight: 900;
+  z-index: 1;
+  margin-top: 40vh;
+  margin-left: 8vw;
+  background: black;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.s1 .btn-grad {
+  grid-row: 2/3;
+  grid-column: 1/2;
+  z-index: 1;
+  margin-top: 50vh;
+  margin-left: 8vw;
 }
 
 .circle {
@@ -109,7 +151,7 @@ body {
   grid-row: 2/3;
   grid-column: 1/2;
   position: relative;
-  top: 35%;
+  top: -25%;
   left: -30%;
   z-index: 0;
   width: 80%;
@@ -123,13 +165,13 @@ body {
   grid-row: 2/3;
   grid-column: 2/3;
   position: relative;
-  top: 5%;
-  left: 0%;
+  top: 0%;
+  left: 15%;
   z-index: 0;
-  width: 40%;
-  height: 40%;
+  width: 90%;
+  height: 90%;
   border-radius: 60%;
-  background-image: linear-gradient(135deg, #E8D07A 10%, #5312D6 100%);
+  background-image: linear-gradient(0deg, #E8D07A 50%, #5312D6 100%);
   box-shadow: -20px -20px 60px #bebebe, 20px 20px 60px #ffffff;
 }
 
@@ -137,8 +179,8 @@ body {
   grid-row: 2/3;
   grid-column: 2/3;
   position: relative;
-  top: 50%;
-  left: 50%;
+  top: -20%;
+  left: -10%;
   z-index: 0;
   width: 70%;
   height: 70%;
@@ -147,34 +189,39 @@ body {
   box-shadow: -20px -20px 60px #bebebe, 20px 20px 60px #ffffff;
 }
 
-.second-background {
-  grid-row: 2/4;
-  grid-column: 2/3;
+.circle-four {
+  grid-row: 2/3;
+  grid-column: 1/2;
   position: relative;
+  top: 50%;
+  left: 80%;
   z-index: 0;
-  width: 100%;
-  height: 100%;
-  border-top-left-radius: 300px;
+  width: 80%;
+  height: 80%;
+  border-radius: 100%;
+  background-image: linear-gradient(200deg, #E8D07A 30%, #5312D6 100%);
 }
 
 .s1 .panel {
-  margin-top: 15vh;
-  margin-left: 5vw;
+  margin-top: 10vh;
+  margin-left: 0vw;
   grid-row: 2/3;
   grid-column: 2/3;
   width: 40vw;
-  height: 50vh;
+  height: 60vh;
+  z-index: 1;
 }
 
 .s1 .panel img {
-  width: 40%;
-  height: 80%;
+  width: 60%;
+  height: 60%;
   float: right;
-  border-radius: 20px;
+  border-top-right-radius: 40px;
 }
 
 .s1 .panel .btn-grad {
   float: right;
+  z-index: 2;
 }
 
 .s2 .circle {
@@ -192,7 +239,7 @@ body {
   font-weight: 900;
   padding-top: 10vh;
   padding-left: 6vw;
-  background: linear-gradient(to right, #000428 0%, #004e92 51%, #000428 100%);
+  background: black;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -228,7 +275,7 @@ body {
   font-weight: 900;
   padding-top: 10vh;
   padding-left: 6vw;
-  background: linear-gradient(to right, #000428 0%, #004e92 51%, #000428 100%);
+  background: black;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -256,7 +303,7 @@ body {
   font-weight: 900;
   padding-top: 0vh;
   padding-left: 6vw;
-  background: linear-gradient(to right, #000428 0%, #004e92 51%, #000428 100%);
+  background: black;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
