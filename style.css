@@ -10,7 +10,7 @@ body {
 }
 
 .s1, .s2, .s3, .s4 {
-  background-image: linear-gradient(to right, #fad0c4 0%, #ffd1ff 100%);
+  background-image: linear-gradient(to right, #dfe9f3 0%, white 100%);
   background-size: cover;
   display: grid;
   height: 100vh;
@@ -116,6 +116,7 @@ body {
   height: 80%;
   border-radius: 80%;
   background-image: linear-gradient(135deg, #E8D07A 10%, #5312D6 100%);
+  box-shadow: -20px -20px 60px #bebebe, 20px 20px 60px #ffffff;
 }
 
 .circle-two {
@@ -129,6 +130,7 @@ body {
   height: 40%;
   border-radius: 60%;
   background-image: linear-gradient(135deg, #E8D07A 10%, #5312D6 100%);
+  box-shadow: -20px -20px 60px #bebebe, 20px 20px 60px #ffffff;
 }
 
 .circle-three {
@@ -141,7 +143,8 @@ body {
   width: 70%;
   height: 70%;
   border-radius: 70%;
-  background-image: linear-gradient(35deg, #E8D07A 10%, #5312D6 100%);
+  background-image: linear-gradient(135deg, #E8D07A 10%, #5312D6 100%);
+  box-shadow: -20px -20px 60px #bebebe, 20px 20px 60px #ffffff;
 }
 
 .second-background {
@@ -179,6 +182,7 @@ body {
   grid-column: 1/2;
   top: 45%;
   left: 5%;
+  box-shadow: -20px -20px 60px #bebebe, 20px 20px 60px #ffffff;
 }
 
 .s2 h1 {
@@ -214,6 +218,7 @@ body {
   grid-column: 1/2;
   top: 45%;
   left: 5%;
+  box-shadow: -20px -20px 60px #bebebe, 20px 20px 60px #ffffff;
 }
 
 .s3 h1 {
@@ -241,6 +246,7 @@ body {
   grid-column: 1/2;
   top: 45%;
   left: 5%;
+  box-shadow: -20px -20px 60px #bebebe, 20px 20px 60px #ffffff;
 }
 
 .s4 h1 {
@@ -266,6 +272,7 @@ body {
   height: 50%;
   border-radius: 80%;
   background-image: linear-gradient(135deg, #E8D07A 10%, #5312D6 100%);
+  box-shadow: -20px -20px 60px #bebebe, 20px 20px 60px #ffffff;
 }
 
 .circle-s4-two {
@@ -279,6 +286,7 @@ body {
   height: 40%;
   border-radius: 60%;
   background-image: linear-gradient(135deg, #E8D07A 10%, #5312D6 100%);
+  box-shadow: -20px -20px 60px #bebebe, 20px 20px 60px #ffffff;
 }
 
 .circle-s4-three {
@@ -292,17 +300,31 @@ body {
   height: 60%;
   border-radius: 80%;
   background-image: linear-gradient(135deg, #E8D07A 10%, #5312D6 100%);
+  box-shadow: -20px -20px 60px #bebebe, 20px 20px 60px #ffffff;
 }
 
 .s4 .panel {
-  left: 10%;
-  top: 25%;
   grid-row: 2/4;
   grid-column: 1/3;
   width: 20vw;
   height: 55vh;
   padding: 0;
   margin: 2vw;
+}
+
+.first-panel {
+  left: 5%;
+  top: 25%;
+}
+
+.second-panel {
+  left: 30%;
+  top: 25%;
+}
+
+.third-panel {
+  left: 55%;
+  top: 25%;
 }
 
 .s4 .panel img {

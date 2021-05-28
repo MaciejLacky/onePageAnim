@@ -7,7 +7,12 @@
   //colors
  
   $logo-color:  linear-gradient( to right, #E8D07A 0%, #5312D6 30%);
-  $background-color: linear-gradient(to right, #fad0c4 0%, #ffd1ff 100%);
+  //$background-color: linear-gradient(to right, #fad0c4 0%, #ffd1ff 100%);
+  $background-color: linear-gradient(to right, #dfe9f3 0%, white 100%);
+  $circle-color:linear-gradient( 135deg, #E8D07A 10%, #5312D6 100%);
+  //$circle-color:  linear-gradient(-225deg, #A445B2 0%, #D41872 52%, #FF0066 100%);
+  $circle-shadow: -20px -20px 60px #bebebe,
+  20px 20px 60px #ffffff;
   $h1-color: linear-gradient(to right, #000428 0%, #004e92  51%, #000428  100%);
   $button-color: linear-gradient(to right, #000428 0%, #004e92  51%, #000428  100%);
   //sizes
@@ -122,7 +127,7 @@
       width: 40%;
       height: 40%;
       border-radius: 80% ;
-      background-image: linear-gradient( 135deg, #E8D07A 10%, #5312D6 100%);
+      background-image: $circle-color;
   }
   .circle-one{
     grid-row: 2/3;
@@ -134,7 +139,8 @@
       width: 80%;
       height: 80%;
       border-radius: 80% ;
-      background-image: linear-gradient( 135deg, #E8D07A 10%, #5312D6 100%);
+      background-image: $circle-color;
+      box-shadow: $circle-shadow;
   }
   .circle-two{
     grid-row: 2/3;
@@ -146,7 +152,8 @@
       width: 40%;
       height: 40%;
       border-radius: 60% ;
-      background-image: linear-gradient( 135deg, #E8D07A 10%, #5312D6 100%);
+      background-image: $circle-color;
+      box-shadow: $circle-shadow;
   }
   .circle-three{
     grid-row: 2/3;
@@ -158,7 +165,8 @@
       width: 70%;
       height: 70%;
       border-radius: 70% ;
-      background-image: linear-gradient( 35deg, #E8D07A 10%, #5312D6 100%);
+      background-image: $circle-color;
+      box-shadow: $circle-shadow;
   }
   
  .second-background{
@@ -198,6 +206,7 @@
     grid-column: 1/2;
     top: 45%;
     left: 5%;
+    box-shadow: $circle-shadow;
   }
   .s2 h1 {
     grid-row: 2/3;
@@ -233,6 +242,7 @@
     grid-column: 1/2;
     top: 45%;
     left: 5%;
+    box-shadow: $circle-shadow;
     
   }
 
@@ -260,6 +270,7 @@
     grid-column: 1/2;
     top: 45%;
     left: 5%;
+    box-shadow: $circle-shadow;
   }
   .s4 h1 {
     grid-row: 2/4;
@@ -284,7 +295,8 @@
       width: 50%;
       height: 50%;
       border-radius: 80% ;
-      background-image: linear-gradient( 135deg, #E8D07A 10%, #5312D6 100%);
+      background-image: $circle-color;
+      box-shadow: $circle-shadow;
   }
 
   .circle-s4-two{
@@ -298,7 +310,8 @@
       width: 40%;
       height: 40%;
       border-radius: 60% ;
-      background-image: linear-gradient( 135deg, #E8D07A 10%, #5312D6 100%);
+      background-image: $circle-color;
+      box-shadow: $circle-shadow;
   }
 
   .circle-s4-three{
@@ -312,18 +325,32 @@
       width:60%;
       height: 60%;
       border-radius: 80% ;
-      background-image: linear-gradient( 135deg, #E8D07A 10%, #5312D6 100%);
+      background-image: $circle-color;
+      box-shadow: $circle-shadow;
   }
 
   .s4 .panel{
-    left: 10%;
-    top:25%;
+   
     grid-row: 2/4;
     grid-column: 1/3;
     width: 20vw;
     height: 55vh;
     padding: 0;
     margin: 2vw;
+  }
+  .first-panel{
+    left: 5%;
+    top:25%;
+  }
+
+  .second-panel{
+    left: 30%;
+    top:25%;
+  }
+  .third-panel{
+    left: 55%;
+    top:25%;
+    
   }
 
   .s4 .panel img{
