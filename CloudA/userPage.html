@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>  
+    <link rel="stylesheet" href="/CloudA/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CloudA" />
+   
+    <title>CloudA</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="menu-top">
+        <div class="menu-top-grid">
+          <a href="../"><img src="/CloudA/img/CloudA2.png" alt="logo clouda"></a>
+          <div class="tab-buttons">
+            <button class="tablink" id="defaultOpen" onclick="openPage('Home', this, 'inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF')"><span>Główna</span><i class="material-icons">home</i></button>
+            <button class="tablink" onclick="openPage('News', this, 'inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF' )" ><span>Ogłoszenia</span><i class="material-icons">message</i></button>
+            <button class="tablink" onclick="openPage('Message', this, 'inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF')"><span>Komunikaty</span><i class="material-icons">message</i></button>
+            <button class="tablink" onclick="openPage('Task', this, 'inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF' )"><span>Zadania</span><i class="material-icons">task</i></button>
+          </div>
+          <img class="ang" src="/CloudA/img/fleng.jpg">
+          <img class="rus" src="/CloudA/img/flros.png" >
+          <a class="user" href="index.html"><i class="material-icons">input</i></a>
+          <a class="logout" href="index.html"><i class="material-icons">account_circle</i></a>
+          <a class="mobile-menu-button" onclick="openNav()" >&#9776</a>
+         
+        </div>
+       
+      </div>
+      <nav>
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <div style="margin-left:20px; margin-bottom: 20px;">
+            <img style="margin-right:10px; margin-bottom: 5px;" src="/CloudA/img/fleng.jpg">
+            <img style="margin-right:20px; margin-bottom: 5px; " src="/CloudA/img/flros.png" >
+            <a style="margin-right:20px" href="index.html"><i class="material-icons"  style="font-size: 30px !important;  color: #61677C;">input</i></a>
+            <a style="margin-right:10px;" href="index.html"><i class="material-icons" style="font-size: 30px !important;  color: #61677C;">account_circle</i></a>
+          </div>
+          <ul class="card-menu card-menu-mobile ">
+            <li><a href="#" class="waves-blue"><i class="material-icons">date_range</i><span>Harmonogram</span></a></li>
+            <li><a href="#" class="waves-blue"><i class="material-icons">school</i><span>Kursy</span></a></li>
+            <li><a href="#" class="waves-blue"><i class="material-icons">ondemand_video</i><span>Transmisje</span></a></li>
+            <li><a href="#" class="waves-blue"><i class="material-icons">description</i><span>Testy</span></a></li>
+            <li><a href="#" class="waves-blue"><i class="material-icons">group_work</i><span>Projekty</span></a></li>
+            <li><a href="#" class="waves-blue"><i class="material-icons">chrome_reader_mode</i><span>Oceny</span></a></li>
+            <li><a href="#" class="waves-blue"><i class="material-icons">assignment_turned_in</i><span>Podania</span></a></li>
+            <li><a href="#" class="waves-blue"><i class="material-icons">toc</i><span>Seminaria</span></a></li>
+            <li><a href="#" class="waves-blue"><i class="material-icons">format_indent_increase</i><span>Plan studiów</span></a></li>
+            <li><a href="#" class="waves-blue"><i class="material-icons">build</i><span>Praktyki</span></a></li>
+            <li><a href="#" class="waves-blue"><i class="material-icons">library_books</i><span>Biblioteka</span></a></li>
+            <li><a href="#" class="waves-blue"><i class="material-icons">book</i><span>Stypendia</span></a></li>
+            <li><a href="#" class="waves-blue"><i class="material-icons">monetization_on</i><span>Finanse</span></a></li>
+            <li><a href="#" class="waves-blue"><i class="material-icons">folder_shared</i><span>Kariera</span></a></li>
+            <li><a href="#" class="waves-blue"><i class="material-icons">message</i><span>Komunikaty</span></a></li>
+            <li><a href="#" class="waves-blue"><i class="material-icons">call</i><span>Konferencje</span></a></li>
+            <li><a href="#" class="waves-blue"><i class="material-icons">note</i><span>Zgłoszenia</span></a></li>
+            <li><a href="#" class="waves-blue"><i class="material-icons">help</i><span>Pomoc</span></a></li>
+            <li><a href="#" class="waves-blue"><i class="material-icons">phone</i><span>Kontakt</span></a></li>
+          </ul>
+          <a href="/Home/Kontakt" class="social-menu" style="margin-left: 20px; margin-top: 10px; margin-bottom: 10px;"><img src="/CloudA/img/facebook.png" alt="facebook link"></a>
+          <a href="/Home/Kontakt" class="social-menu" style="margin-left: 40px;  margin-top: 10px; margin-bottom: 10px;"><img src="/CloudA/img/linkedin.png" alt="linkedin"></a>
+          <a href="/Home/Kontakt" class="social-menu" style="margin-left: 40px;  margin-top: 10px; margin-bottom: 10px;"><img src="/CloudA/img/youtube-play.png" alt="youtube-play"></a>
+        </div>
+        <div class="menu-side">
+          <ul class="card-menu ">
+            <li><a href="#/Harmonogram/Index" class="waves-blue"><i class="material-icons">date_range</i><span>Harmonogram</span></a></li>
+            <li><a href="#/Kursy/ListaPlanowKursy" class="waves-blue"><i class="material-icons">school</i><span>Kursy</span></a></li>
+            <li><a href="#/Transmisja/TransmisjaWyklady" class="waves-blue"><i class="material-icons">ondemand_video</i><span>Transmisje</span></a></li>
+            <li><a href="#/Ankiety/Index" class="waves-blue"><i class="material-icons">description</i><span>Testy</span></a></li>
+            <li><a href="#/ProjektCloudA/Index" class="waves-blue"><i class="material-icons">group_work</i><span>Projekty</span></a></li>
+            <li><a href="#/Kursy/ListaPlanowOceny" class="waves-blue"><i class="material-icons">chrome_reader_mode</i><span>Oceny</span></a></li>
+            <li><a href="#/PodanieStudenta/Index" class="waves-blue"><i class="material-icons">assignment_turned_in</i><span>Podania</span></a></li>
+            <li><a href="#/Seminaria/Index" class="waves-blue"><i class="material-icons">toc</i><span>Seminaria</span></a></li>
+            <li><a href="#/PlanStudenta/Index" class="waves-blue"><i class="material-icons">format_indent_increase</i><span>Plan studiów</span></a></li>
+            <li><a href="#/Praktyki/Index" class="waves-blue"><i class="material-icons">build</i><span>Praktyki</span></a></li>
+            <li><a href="#/Biblioteka/Informacje" class="waves-blue"><i class="material-icons">library_books</i><span>Biblioteka</span></a></li>
+            <li><a href="#/Stypendia/Index" class="waves-blue"><i class="material-icons">book</i><span>Stypendia</span></a></li>
+            <li><a href="#/Platnosci/Index" class="waves-blue"><i class="material-icons">monetization_on</i><span>Finanse</span></a></li>
+            <li><a href="#/Kariera/Oferty" class="waves-blue"><i class="material-icons">folder_shared</i><span>Kariera</span></a></li>
+            <li><a href="#/Komunikat/Index" class="waves-blue"><i class="material-icons">message</i><span>Komunikaty</span></a></li>
+            <li><a href="#/Konferencja/Index" class="waves-blue"><i class="material-icons">call</i><span>Konferencje</span></a></li>
+            <li><a href="#/Zgloszenie/Index" class="waves-blue"><i class="material-icons">note</i><span>Zgłoszenia</span></a></li>
+            <li><a href="#/Pomoc/Index" class="waves-blue"><i class="material-icons">help</i><span>Pomoc</span></a></li>
+            <li><a href="#/Home/Kontakt" class="waves-blue"><i class="material-icons">phone</i><span>Kontakt</span></a></li>
+           
+          </ul>
+          <a href="/Home/Kontakt" class="social-menu"><img src="/CloudA/img/facebook.png" alt="facebook link"></a>
+          <a href="/Home/Kontakt" class="social-menu"><img src="/CloudA/img/linkedin.png" alt="linkedin"></a>
+          <a href="/Home/Kontakt" class="social-menu"><img src="/CloudA/img/youtube-play.png" alt="youtube-play"></a>
+        </div>
+      </nav>
+      <div id="Home" class="tabcontent">
+        <div class="workspace">
+          <div class="workspace-grid">
+           
+            <div class="card-main-left">
+              <div class="payment">
+                <img src="/CloudA/img/platnosciIkona.png" alt="ikona platnosci">
+                <p class="text-linear-gradient" style="font-weight: 600;">Bardzo nas to cieszy! <br/>Nie zalegasz z płatnościami</p>               
+              </div>
+              <div class="payment-history">
+                <h3 class="text-linear-gradient-short">Historia wpłat</h3>
+                <div class="payment-history-buttons">
+                  <button>Przyszłe </button>
+                <button>Zaległe</button>
+                <button>Przelew</button>
+                </div>
+                
+              </div>
+              <div style="clear: both;"></div>
+            </div>
+            
+            <div class="card-main-left">  
+              <h3 class="text-linear-gradient-short">Postępy w nauce</h3>          
+              <div class="bar">
+                <svg>
+                  <circle cx='50%' cy='50%' r="50%"></circle>
+                </svg>
+                <p class="text-chart">do końca semestru<br><span>50 dni</span></p>
+              </div>
+              <div class="bar" style="float: right;">
+                <svg>
+                  <circle cx='50%' cy='50%' r="50%"></circle>
+                </svg>
+                <p class="text-chart">średnia ocen<br><span>5.0</span></p>
+              </div>
+              
+            </div>
+            <div class="card-main-right">
+              <h3 class="text-linear-gradient">Zbilżający się termin zadań</h3>
+              <div class="agenda-line"></div>
+              <div class="tasks">
+                <div class="task">
+                  <p>Programowanie aplikacji biznesowych</p>
+                  <p>Zadanie: <span>Operacje z kluczem obcym</span></p>
+                  <p>Punkty: 5</p>
+                  <p>Termina realizacji: <span>13.06.2021</span></p>
+                </div>
+                <button><i class="material-icons">publish</i></button>          
+              </div>
+              <div class="tasks">
+                <div class="task">
+                  <p>Programowanie aplikacji biznesowych</p>
+                  <p>Zadanie: <span>Logika biznesowa</span></p>
+                  <p>Punkty: 5</p>
+                  <p>Termina realizacji: <span>13.06.2021</span></p>
+                </div>
+                <button><i class="material-icons">publish</i></button>          
+              </div>
+              <div class="tasks">
+                <div class="task">
+                  <p>Programowanie aplikacji biznesowych</p>
+                  <p>Zadanie: <span>Baza danych</span></p>
+                  <p>Punkty: 5</p>
+                  <p>Termina realizacji: <span>13.06.2021</span></p>
+
+                </div>
+                <button><i class="material-icons">publish</i></button>          
+              </div>
+            </div>
+            
+            <div class="card-main-a"> 
+              <div class="news-grid">
+                <img src="/CloudA/img/nkonowalik_bf10085a-2495-4b3c-bf7b-aec5e0d8f4f5_min.jpg">
+                <h3>Kto jeszcze nie zdążył zarejestrować się na „Run 4 a Smile"!?</h3>
+                <p>📯Wielkie odliczanie rozpoczęte!  
+                  Nasz Run 4 a Smile odbędzie się już za niespełna 3 tygodnie🏃‍♀️🏃‍♂️
+                  Jesteście ciekawi jak idą nam przygotowania do ósmej edycji Run 4 a Smile? 🙂
+                  Są to prace intensywne, ale przy tym wszystkim niesamowicie satysfakcjonujące!
+                  A kto opowie o tym lepiej niż sami organizatorzy? 
+                  Zapraszamy do obejrzenia wywiadu, który zrealizowany został dzięki uprzejmości Regionalnej Telewizji Kablowej...  </p>
+                  <span><i class="material-icons left">date_range</i> 11 maja</span>
+                  <a class="text-linear-gradient-short">Zobacz więcej<i class="material-icons">navigate_next</i></a>               
+              </div>           
+            </div>
+            <div class="card-main-a"> 
+              <div class="news-grid">
+                <img src="/CloudA/img/nkonowalik_79d6265e-cae2-4262-ae67-17194fe45278_min.jpg">
+                <h3>Oferta stażu - Dział IT WSB-NLU</h3>
+                <p>Szanowni Państwo,
+
+                  WSB-NLU ogłasza nabór na bezpłatny staż w Dziale IT, z możliwą opcją zatrudnienia.
+                  
+                  Oferta stażu jest dostępna tylko i wyłącznie dla studentów naszej Uczelni. Osoby które przejdą przez proces rekrutacyjny rozpoczną staż od dnia 1 czerwca 2021r. Zainteresowanych prosimy o przesyłanie aplikacji z krótkim listem motywacyjnym na adres it@wsb-nlu.edu.pl - czas zgłoszenia jest jednym z kryteriów rekrutacyjnych...
+                  
+                 </p>
+                  <span><i class="material-icons left">date_range</i> 11 maja</span>
+                  <a class="text-linear-gradient-short">Zobacz więcej<i class="material-icons">navigate_next</i></a>               
+              </div>           
+            </div>
+            <div class="card-main-a"> 
+              <div class="news-grid">
+                <img src="/CloudA/img/nkonowalik_bf10085a-2495-4b3c-bf7b-aec5e0d8f4f5_min.jpg">
+                <h3>Kto jeszcze nie zdążył zarejestrować się na „Run 4 a Smile"!?</h3>
+                <p>📯Wielkie odliczanie rozpoczęte!  
+                  Nasz Run 4 a Smile odbędzie się już za niespełna 3 tygodnie🏃‍♀️🏃‍♂️
+                  Jesteście ciekawi jak idą nam przygotowania do ósmej edycji Run 4 a Smile? 🙂
+                  Są to prace intensywne, ale przy tym wszystkim niesamowicie satysfakcjonujące!
+                  A kto opowie o tym lepiej niż sami organizatorzy? 
+                  Zapraszamy do obejrzenia wywiadu, który zrealizowany został dzięki uprzejmości Regionalnej Telewizji Kablowej...  </p>
+                  <span><i class="material-icons left">date_range</i> 11 maja</span>
+                  <a class="text-linear-gradient-short">Zobacz więcej<i class="material-icons">navigate_next</i></a>               
+              </div>           
+            </div>
+            <div class="card-main-a"> 
+              <div class="news-grid">
+                <img src="/CloudA/img/nkonowalik_79d6265e-cae2-4262-ae67-17194fe45278_min.jpg">
+                <h3>Oferta stażu - Dział IT WSB-NLU</h3>
+                <p>Szanowni Państwo,
+
+                  WSB-NLU ogłasza nabór na bezpłatny staż w Dziale IT, z możliwą opcją zatrudnienia.
+                  
+                  Oferta stażu jest dostępna tylko i wyłącznie dla studentów naszej Uczelni. Osoby które przejdą przez proces rekrutacyjny rozpoczną staż od dnia 1 czerwca 2021r. Zainteresowanych prosimy o przesyłanie aplikacji z krótkim listem motywacyjnym na adres it@wsb-nlu.edu.pl - czas zgłoszenia jest jednym z kryteriów rekrutacyjnych...
+                  
+                 </p>
+                  <span><i class="material-icons left">date_range</i> 11 maja</span>
+                  <a class="text-linear-gradient-short">Zobacz więcej<i class="material-icons">navigate_next</i></a>               
+              </div>           
+            </div>
+            <div class="card-main-a"> 
+              <div class="news-grid">
+                <img src="/CloudA/img/nkonowalik_bf10085a-2495-4b3c-bf7b-aec5e0d8f4f5_min.jpg">
+                <h3>Kto jeszcze nie zdążył zarejestrować się na „Run 4 a Smile"!?</h3>
+                <p>📯Wielkie odliczanie rozpoczęte!  
+                  Nasz Run 4 a Smile odbędzie się już za niespełna 3 tygodnie🏃‍♀️🏃‍♂️
+                  Jesteście ciekawi jak idą nam przygotowania do ósmej edycji Run 4 a Smile? 🙂
+                  Są to prace intensywne, ale przy tym wszystkim niesamowicie satysfakcjonujące!
+                  A kto opowie o tym lepiej niż sami organizatorzy? 
+                  Zapraszamy do obejrzenia wywiadu, który zrealizowany został dzięki uprzejmości Regionalnej Telewizji Kablowej...  </p>
+                  <span><i class="material-icons left">date_range</i> 11 maja</span>
+                  <a class="text-linear-gradient-short">Zobacz więcej<i class="material-icons">navigate_next</i></a>               
+              </div>           
+            </div>
+            <div class="card-main-a"> 
+              <div class="news-grid">
+                <img src="/CloudA/img/nkonowalik_79d6265e-cae2-4262-ae67-17194fe45278_min.jpg">
+                <h3>Oferta stażu - Dział IT WSB-NLU</h3>
+                <p>Szanowni Państwo,
+
+                  WSB-NLU ogłasza nabór na bezpłatny staż w Dziale IT, z możliwą opcją zatrudnienia.
+                  
+                  Oferta stażu jest dostępna tylko i wyłącznie dla studentów naszej Uczelni. Osoby które przejdą przez proces rekrutacyjny rozpoczną staż od dnia 1 czerwca 2021r. Zainteresowanych prosimy o przesyłanie aplikacji z krótkim listem motywacyjnym na adres it@wsb-nlu.edu.pl - czas zgłoszenia jest jednym z kryteriów rekrutacyjnych...
+                  
+                 </p>
+                  <span><i class="material-icons left">date_range</i> 11 maja</span>
+                  <a class="text-linear-gradient-short">Zobacz więcej<i class="material-icons">navigate_next</i></a>               
+              </div>           
+            </div>
+            <div class="card-second-a">
+              <div class="agenda">
+                <h3 class="text-linear-gradient">Nabliższe zajęcia:  <span> sobota 25.06</span></h3>
+                <button><i class="material-icons">arrow_right</i></button>
+                <button><i class="material-icons">arrow_left</i></button>
+                <div style="clear: both;"></div>
+                <div class="agenda-line"></div>
+                <div class="agenda-items">
+                  <div class="agenda-item-left">                 
+                    <p><span>Programowanie aplikacji desktopowych</span></p>
+                    <p>wykład</p>
+                    <p>mgr Artur Kornatka</p>
+                  </div>
+                  <div class="agenda-item-right">                  
+                    <p><span>8.00 - 10.15</span></p>
+                    <p>C117</p>
+                    <p>Transmisja</p>
+                  </div>                  
+                </div>
+                <div class="agenda-items">
+                  <div class="agenda-item-left">                 
+                    <p><span>Programowanie aplikacji desktopowych</span></p>
+                    <p>wykład</p>
+                    <p>mgr Artur Kornatka</p>
+                  </div>
+                  <div class="agenda-item-right">                  
+                    <p><span>10.30 - 12.15</span></p>
+                    <p>C117</p>
+                    <p>Transmisja</p>
+                  </div>                  
+                </div>
+                <div class="agenda-items">
+                  <div class="agenda-item-left">                 
+                    <p><span>Bazy danych</span></p>
+                    <p>wykład</p>
+                    <p>mgr Artur Kornatka</p>
+                  </div>
+                  <div class="agenda-item-right">                  
+                    <p><span>14.00 - 15.15</span></p>
+                    <p>C117</p>
+                    <p>Transmisja</p>
+                  </div>                  
+                </div>
+                <div class="agenda-items">
+                  <div class="agenda-item-left">                 
+                    <p><span>Seminarium dyplomowe</span></p>
+                    <p>wykład</p>
+                    <p>mgr Artur Kornatka</p>
+                  </div>
+                  <div class="agenda-item-right">                  
+                    <p><span>8.00 - 10.15</span></p>
+                    <p>C117</p>
+                    <p>Transmisja</p>
+                  </div>                  
+                </div>
+             </div>
+            </div>
+            <div class="card-second-b">
+              <video src="/CloudA/img/CloudA-video.mp4" type="video/mp4" controls ></video>
+              <h3 class="text-linear-gradient">Masz już naszą aplikacje mobilną?</h3>      
+              <div class="mobile-links">
+                <a href="https://itunes.apple.com/pl/app/clouda/id1220784966?l=pl&amp;mt=8">
+                  <img src="/CloudA/img/appstore.png">
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.CloudA.android">
+                  <img src="/CloudA/img/google_play.png">
+                </a>
+              </div>            
+            </div>
+          </div>
+          </div>
+      </div>
+      
+      <div id="News" class="tabcontent">
+       <div class="workspace">
+        <div class="workspace-grid">
+          <div class="card-main-a"> 
+            <div class="news-grid">
+              <img src="/CloudA/img/nkonowalik_bf10085a-2495-4b3c-bf7b-aec5e0d8f4f5_min.jpg">
+              <h3>Kto jeszcze nie zdążył zarejestrować się na „Run 4 a Smile"!?</h3>
+              <p>📯Wielkie odliczanie rozpoczęte!  
+                Nasz Run 4 a Smile odbędzie się już za niespełna 3 tygodnie🏃‍♀️🏃‍♂️
+                Jesteście ciekawi jak idą nam przygotowania do ósmej edycji Run 4 a Smile? 🙂
+                Są to prace intensywne, ale przy tym wszystkim niesamowicie satysfakcjonujące!
+                A kto opowie o tym lepiej niż sami organizatorzy? 
+                Zapraszamy do obejrzenia wywiadu, który zrealizowany został dzięki uprzejmości Regionalnej Telewizji Kablowej...  </p>
+                <span><i class="material-icons left">date_range</i> 11 maja</span>
+                <a class="text-linear-gradient-short">Zobacz więcej<i class="material-icons">navigate_next</i></a>               
+            </div>           
+          </div>
+          <div class="card-main-a"> 
+            <div class="news-grid">
+              <img src="/CloudA/img/nkonowalik_79d6265e-cae2-4262-ae67-17194fe45278_min.jpg">
+              <h3>Oferta stażu - Dział IT WSB-NLU</h3>
+              <p>Szanowni Państwo,
+
+                WSB-NLU ogłasza nabór na bezpłatny staż w Dziale IT, z możliwą opcją zatrudnienia.
+                
+                Oferta stażu jest dostępna tylko i wyłącznie dla studentów naszej Uczelni. Osoby które przejdą przez proces rekrutacyjny rozpoczną staż od dnia 1 czerwca 2021r. Zainteresowanych prosimy o przesyłanie aplikacji z krótkim listem motywacyjnym na adres it@wsb-nlu.edu.pl - czas zgłoszenia jest jednym z kryteriów rekrutacyjnych...
+                
+               </p>
+                <span><i class="material-icons left">date_range</i> 11 maja</span>
+                <a class="text-linear-gradient-short">Zobacz więcej<i class="material-icons">navigate_next</i></a>               
+            </div>           
+          </div>
+          <div class="card-main-a"> 
+            <div class="news-grid">
+              <img src="/CloudA/img/nkonowalik_bf10085a-2495-4b3c-bf7b-aec5e0d8f4f5_min.jpg">
+              <h3>Kto jeszcze nie zdążył zarejestrować się na „Run 4 a Smile"!?</h3>
+              <p>📯Wielkie odliczanie rozpoczęte!  
+                Nasz Run 4 a Smile odbędzie się już za niespełna 3 tygodnie🏃‍♀️🏃‍♂️
+                Jesteście ciekawi jak idą nam przygotowania do ósmej edycji Run 4 a Smile? 🙂
+                Są to prace intensywne, ale przy tym wszystkim niesamowicie satysfakcjonujące!
+                A kto opowie o tym lepiej niż sami organizatorzy? 
+                Zapraszamy do obejrzenia wywiadu, który zrealizowany został dzięki uprzejmości Regionalnej Telewizji Kablowej...  </p>
+                <span><i class="material-icons left">date_range</i> 11 maja</span>
+                <a class="text-linear-gradient-short">Zobacz więcej<i class="material-icons">navigate_next</i></a>               
+            </div>           
+          </div>
+          <div class="card-main-a"> 
+            <div class="news-grid">
+              <img src="/CloudA/img/nkonowalik_79d6265e-cae2-4262-ae67-17194fe45278_min.jpg">
+              <h3>Oferta stażu - Dział IT WSB-NLU</h3>
+              <p>Szanowni Państwo,
+
+                WSB-NLU ogłasza nabór na bezpłatny staż w Dziale IT, z możliwą opcją zatrudnienia.
+                
+                Oferta stażu jest dostępna tylko i wyłącznie dla studentów naszej Uczelni. Osoby które przejdą przez proces rekrutacyjny rozpoczną staż od dnia 1 czerwca 2021r. Zainteresowanych prosimy o przesyłanie aplikacji z krótkim listem motywacyjnym na adres it@wsb-nlu.edu.pl - czas zgłoszenia jest jednym z kryteriów rekrutacyjnych...
+                
+               </p>
+                <span><i class="material-icons left">date_range</i> 11 maja</span>
+                <a class="text-linear-gradient-short">Zobacz więcej<i class="material-icons">navigate_next</i></a>               
+            </div>           
+          </div>
+          <div class="card-second-a">
+            <h3 class="text-linear-gradient-short">Sortowanie i filtrowanie:</h3>
+            <div class="agenda-line"></div>
+            <form action="userPage.html" style="margin: 1vw;">
+              <div class="input-group">
+                <label>
+                  <input type="text" placeholder="szukaj"/>
+                </label>
+                <button class="unit" type="button"><i class="material-icons">search</i></button>
+              </div>
+              <label class="label" style="margin-top: 1vw ;">
+                <div class="toggle">
+                  <input class="toggle-state" type="checkbox" name="check" value="check" />
+                  <div class="indicator"></div>
+                </div>
+                <div class="label-text">data rosnąco</div>
+              </label>
+              <label class="label">
+                <div class="toggle">
+                  <input class="toggle-state"  type="checkbox" name="check" value=""  />
+                  <div class="indicator"></div>
+                </div>
+                <div class="label-text">data malejąco</div>
+              </label>
+              <label class="label">
+                <div class="toggle">
+                  <input class="toggle-state" type="checkbox" name="check" value="check" />
+                  <div class="indicator"></div>
+                </div>
+                <div class="label-text">nazwa rosnąco</div>
+              </label>
+              <label class="label">
+                <div class="toggle">
+                  <input class="toggle-state" type="checkbox" name="check" value="check" />
+                  <div class="indicator"></div>
+                </div>
+                <div class="label-text">nazwa malejąco</div>
+              </label>
+              <button class="button-filtr" type="submit"><i class="icon ion-md-lock"></i> Filtruj</button>
+            </form>
+          </div>
+          <div class="card-second-c">
+            <video src="/CloudA/img/CloudA-video.mp4" type="video/mp4" controls ></video>
+            <h3 class="text-linear-gradient">Masz już naszą aplikacje mobilną?</h3>      
+            <div class="mobile-links">
+              <a href="https://itunes.apple.com/pl/app/clouda/id1220784966?l=pl&amp;mt=8">
+                <img src="/CloudA/img/appstore.png">
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=com.CloudA.android">
+                <img src="/CloudA/img/google_play.png">
+              </a>
+            </div>            
+          </div>
+        </div>
+       </div>
+      </div>
+      
+      <div id="Message" class="tabcontent">
+        <div class="workspace">
+          <div class="workspace-grid">
+            <div class="card-main-a"> 
+              <div class="news-grid">
+                <img src="/CloudA/img/komunikat.png" style="width: 50%; height: 70%;">
+                <h3>Kto jeszcze nie zdążył zarejestrować się na „Run 4 a Smile"!?</h3>
+                <p>📯Wielkie odliczanie rozpoczęte!  
+                  Nasz Run 4 a Smile odbędzie się już za niespełna 3 tygodnie🏃‍♀️🏃‍♂️
+                  Jesteście ciekawi jak idą nam przygotowania do ósmej edycji Run 4 a Smile? 🙂
+                  Są to prace intensywne, ale przy tym wszystkim niesamowicie satysfakcjonujące!
+                  A kto opowie o tym lepiej niż sami organizatorzy? 
+                  Zapraszamy do obejrzenia wywiadu, który zrealizowany został dzięki uprzejmości Regionalnej Telewizji Kablowej...  </p>
+                  <span><i class="material-icons left">date_range</i> 11 maja</span>
+                  <a class="text-linear-gradient-short">Zobacz więcej<i class="material-icons">navigate_next</i></a>               
+              </div>           
+            </div>
+            <div class="card-main-a"> 
+              <div class="news-grid">
+                <img src="/CloudA/img/komunikat.png" style="width: 50%; height: 70%;">
+                <h3>Oferta stażu - Dział IT WSB-NLU</h3>
+                <p>Szanowni Państwo,
+
+                  WSB-NLU ogłasza nabór na bezpłatny staż w Dziale IT, z możliwą opcją zatrudnienia.
+                  
+                  Oferta stażu jest dostępna tylko i wyłącznie dla studentów naszej Uczelni. Osoby które przejdą przez proces rekrutacyjny rozpoczną staż od dnia 1 czerwca 2021r. Zainteresowanych prosimy o przesyłanie aplikacji z krótkim listem motywacyjnym na adres it@wsb-nlu.edu.pl - czas zgłoszenia jest jednym z kryteriów rekrutacyjnych...
+                  
+                 </p>
+                  <span><i class="material-icons left">date_range</i> 11 maja</span>
+                  <a class="text-linear-gradient-short">Zobacz więcej<i class="material-icons">navigate_next</i></a>               
+              </div>           
+            </div>
+            <div class="card-main-a"> 
+              <div class="news-grid">
+                <img src="/CloudA/img/komunikat.png" style="width: 50%; height: 70%;">
+                <h3>Kto jeszcze nie zdążył zarejestrować się na „Run 4 a Smile"!?</h3>
+                <p>📯Wielkie odliczanie rozpoczęte!  
+                  Nasz Run 4 a Smile odbędzie się już za niespełna 3 tygodnie🏃‍♀️🏃‍♂️
+                  Jesteście ciekawi jak idą nam przygotowania do ósmej edycji Run 4 a Smile? 🙂
+                  Są to prace intensywne, ale przy tym wszystkim niesamowicie satysfakcjonujące!
+                  A kto opowie o tym lepiej niż sami organizatorzy? 
+                  Zapraszamy do obejrzenia wywiadu, który zrealizowany został dzięki uprzejmości Regionalnej Telewizji Kablowej...  </p>
+                  <span><i class="material-icons left">date_range</i> 11 maja</span>
+                  <a class="text-linear-gradient-short">Zobacz więcej<i class="material-icons">navigate_next</i></a>               
+              </div>           
+            </div>
+            <div class="card-main-a"> 
+              <div class="news-grid">
+                <img src="/CloudA/img/komunikat.png" style="width: 50%; height: 70%;">
+                <h3>Oferta stażu - Dział IT WSB-NLU</h3>
+                <p>Szanowni Państwo,
+
+                  WSB-NLU ogłasza nabór na bezpłatny staż w Dziale IT, z możliwą opcją zatrudnienia.
+                  
+                  Oferta stażu jest dostępna tylko i wyłącznie dla studentów naszej Uczelni. Osoby które przejdą przez proces rekrutacyjny rozpoczną staż od dnia 1 czerwca 2021r. Zainteresowanych prosimy o przesyłanie aplikacji z krótkim listem motywacyjnym na adres it@wsb-nlu.edu.pl - czas zgłoszenia jest jednym z kryteriów rekrutacyjnych...
+                  
+                 </p>
+                  <span><i class="material-icons left">date_range</i> 11 maja</span>
+                  <a class="text-linear-gradient-short">Zobacz więcej<i class="material-icons">navigate_next</i></a>               
+              </div>           
+            </div>
+            <div class="card-second-a">
+              <h3 class="text-linear-gradient-short">Sortowanie i filtrowanie:</h3>
+              <div class="agenda-line"></div>
+              <form action="userPage.html" style="margin: 1vw;">
+                <div class="input-group">
+                  <label>
+                    <input type="text" placeholder="szukaj"/>
+                  </label>
+                  <button class="unit" type="button"><i class="material-icons">search</i></button>
+                </div>
+                <label class="label" style="margin-top: 1vw ;">
+                  <div class="toggle">
+                    <input class="toggle-state" type="checkbox" name="check" value="check" />
+                    <div class="indicator"></div>
+                  </div>
+                  <div class="label-text">data rosnąco</div>
+                </label>
+                <label class="label">
+                  <div class="toggle">
+                    <input class="toggle-state"  type="checkbox" name="check" value=""  />
+                    <div class="indicator"></div>
+                  </div>
+                  <div class="label-text">data malejąco</div>
+                </label>
+                <label class="label">
+                  <div class="toggle">
+                    <input class="toggle-state" type="checkbox" name="check" value="check" />
+                    <div class="indicator"></div>
+                  </div>
+                  <div class="label-text">nazwa rosnąco</div>
+                </label>
+                <label class="label">
+                  <div class="toggle">
+                    <input class="toggle-state" type="checkbox" name="check" value="check" />
+                    <div class="indicator"></div>
+                  </div>
+                  <div class="label-text">nazwa malejąco</div>
+                </label>
+                <button class="button-filtr" type="submit"><i class="icon ion-md-lock"></i> Filtruj</button>
+              </form>
+            </div>
+            <div class="card-second-c">
+              <video src="/CloudA/img/CloudA-video.mp4" type="video/mp4" controls ></video>
+              <h3 class="text-linear-gradient">Masz już naszą aplikacje mobilną?</h3>      
+              <div class="mobile-links">
+                <a href="https://itunes.apple.com/pl/app/clouda/id1220784966?l=pl&amp;mt=8">
+                  <img src="/CloudA/img/appstore.png">
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.CloudA.android">
+                  <img src="/CloudA/img/google_play.png">
+                </a>
+              </div>            
+            </div>
+          </div>
+         </div>
+      </div>
+      
+      <div id="Task" class="tabcontent">
+        <div class="workspace">
+          <div class="workspace-grid">
+            <div class="card-main-a"> 
+              <div class="news-grid">
+                <img src="/CloudA/img/dodanoZadanie.png" style="width: 50%; height: 70%;">
+                <h3>Programowanie aplikacji biznesowych</h3>
+                <p>Zaprojektuj bazę danych do swojego projektu.
+
+                  Minimum 15 tabel.
+                  
+                  Tabele powinny spełniać wymogi stawiane rozbudowanym aplikacjom biznesowym.
+                  
+                  Patrz wzór bazy danych z pierwszych ćwiczeń.
+                  
+                  Bazę danych należy zademonstrować na ćwiczeniach. </p>
+                  <span><i class="material-icons left">date_range</i> 11 maja</span>
+                  <a class="text-linear-gradient-short">Zobacz więcej<i class="material-icons">navigate_next</i></a>               
+              </div>           
+            </div>
+            <div class="card-main-a"> 
+              <div class="news-grid">
+                <img src="/CloudA/img/dodanoZadanie.png" style="width: 50%; height: 70%;">
+                <h3>Programowanie aplikacji biznesowych</h3>
+                <p>Zaprojektuj bazę danych do swojego projektu.
+
+                  Minimum 15 tabel.
+                  
+                  Tabele powinny spełniać wymogi stawiane rozbudowanym aplikacjom biznesowym.
+                  
+                  Patrz wzór bazy danych z pierwszych ćwiczeń.
+                  
+                  Bazę danych należy zademonstrować na ćwiczeniach.
+                 </p>
+                  <span><i class="material-icons left">date_range</i> 11 maja</span>
+                  <a class="text-linear-gradient-short">Zobacz więcej<i class="material-icons">navigate_next</i></a>               
+              </div>           
+            </div>
+            <div class="card-main-a"> 
+              <div class="news-grid">
+                <img src="/CloudA/img/dodanoZadanie.png" style="width: 50%; height: 70%;">
+                <h3>Programowanie aplikacji biznesowych</h3>
+                <p>Zaprojektuj bazę danych do swojego projektu.
+
+                  Minimum 15 tabel.
+                  
+                  Tabele powinny spełniać wymogi stawiane rozbudowanym aplikacjom biznesowym.
+                  
+                  Patrz wzór bazy danych z pierwszych ćwiczeń.
+                  
+                  Bazę danych należy zademonstrować na ćwiczeniach. </p>
+                  <span><i class="material-icons left">date_range</i> 11 maja</span>
+                  <a class="text-linear-gradient-short">Zobacz więcej<i class="material-icons">navigate_next</i></a>               
+              </div>           
+            </div>
+            <div class="card-main-a"> 
+              <div class="news-grid">
+                <img src="/CloudA/img/dodanoZadanie.png" style="width: 50%; height: 70%;">
+                <h3>Programowanie aplikacji biznesowych</h3>
+                <p>Zaprojektuj bazę danych do swojego projektu.
+
+                  Minimum 15 tabel.
+                  
+                  Tabele powinny spełniać wymogi stawiane rozbudowanym aplikacjom biznesowym.
+                  
+                  Patrz wzór bazy danych z pierwszych ćwiczeń.
+                  
+                  Bazę danych należy zademonstrować na ćwiczeniach.
+                 </p>
+                  <span><i class="material-icons left">date_range</i> 11 maja</span>
+                  <a class="text-linear-gradient-short">Zobacz więcej<i class="material-icons">navigate_next</i></a>               
+              </div>           
+            </div>
+            <div class="card-second-a">
+              <h3 class="text-linear-gradient-short">Sortowanie i filtrowanie:</h3>
+              <div class="agenda-line"></div>
+              <form action="userPage.html" style="margin: 1vw;">
+                <div class="input-group">
+                  <label>
+                    <input type="text" placeholder="szukaj"/>
+                  </label>
+                  <button class="unit" type="button"><i class="material-icons">search</i></button>
+                </div>
+                <label class="label" style="margin-top: 1vw ;">
+                  <div class="toggle">
+                    <input class="toggle-state" type="checkbox" name="check" value="check" />
+                    <div class="indicator"></div>
+                  </div>
+                  <div class="label-text">data rosnąco</div>
+                </label>
+                <label class="label">
+                  <div class="toggle">
+                    <input class="toggle-state"  type="checkbox" name="check" value=""  />
+                    <div class="indicator"></div>
+                  </div>
+                  <div class="label-text">data malejąco</div>
+                </label>
+                <label class="label">
+                  <div class="toggle">
+                    <input class="toggle-state" type="checkbox" name="check" value="check" />
+                    <div class="indicator"></div>
+                  </div>
+                  <div class="label-text">nazwa rosnąco</div>
+                </label>
+                <label class="label">
+                  <div class="toggle">
+                    <input class="toggle-state" type="checkbox" name="check" value="check" />
+                    <div class="indicator"></div>
+                  </div>
+                  <div class="label-text">nazwa malejąco</div>
+                </label>
+                <button class="button-filtr" type="submit"><i class="icon ion-md-lock"></i> Filtruj</button>
+              </form>
+            </div>
+            <div class="card-second-c">
+              <video src="/CloudA/img/CloudA-video.mp4" type="video/mp4" controls ></video>
+              <h3 class="text-linear-gradient">Masz już naszą aplikacje mobilną?</h3>      
+              <div class="mobile-links">
+                <a href="https://itunes.apple.com/pl/app/clouda/id1220784966?l=pl&amp;mt=8">
+                  <img src="/CloudA/img/appstore.png">
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.CloudA.android">
+                  <img src="/CloudA/img/google_play.png">
+                </a>
+              </div>            
+            </div>
+          </div>
+         </div>
+      </div>
+      
+     
+      <footer>
+     
+      </footer>
+    </div>
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+      </script>
+    <script src="/CloudA/tabPage.js"></script>
+ </body>
+</html>

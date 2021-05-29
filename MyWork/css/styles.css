@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+
+
+.glass {
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(255, 255, 255, 0.1) 100%
+    );
+    backdrop-filter: blur(40px);
+    box-shadow: rgba(255, 255, 255, 0.5) -20px -20px 45px inset,
+      rgba(0, 0, 0, 0.1) 10px 10px 20px, rgba(0, 0, 0, 0.06) 5px 5px 10px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+
+.text-grad{
+  font-size: 3vw;
+        font-weight: 600;
+        background: linear-gradient( to right, #E8D07A -10%, #5312D6 50%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+.text-grad-desc{
+ 
+        color:black;
+}
+
+.btn-grad {
+  background-image:linear-gradient(to right, #000000 0%, #434343  51%, #000000  100%);
+  margin-bottom: 10vw;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;   
+  font-weight: 600;         
+  box-shadow: 0 0 20px #eee;
+  border-radius: 30px;
+  width: 60%;
+  height: 6%;
+  
+  
+}
+
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+.tablink {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+ 
+}
+
+.tablink:hover {
+  color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+

@@ -8,17 +8,40 @@
       href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./fullpage.min.css" />
     <link rel="stylesheet" href="./style.css" />
     <title>Fullpage</title>
   </head>
 
   <body>
+    <div id="myNav" class="overlay">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <div class="overlay-content">
+        <a href="About/index.html">O mnie</a>
+        <a href="MyWork/index.html">Moje projekty</a>
+        <a href="About/index.html">Kontakt</a>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/maciej.lacki.5" class="fa fa-facebook"></a>
+          <a href="https://github.com/MaciejLacky" class="fa fa-github"></a>
+          <a href="https://www.linkedin.com/in/maciej-%C5%82%C4%85cki-ba57b0193/" class="fa fa-linkedin"></a>
+        </div>
+      </div>
+    </div>
     <div id="fullpage">
       <section class="section">
       
         
         <div class="s1" >
+          <div class="btn-menu">
+
+            <span  onclick="openNav()">&#9776;</span>
+            <i class="material-icons">phone</i>
+            <p>603 934 692</p>
+            <i class="material-icons">mail</i>
+            <p><a href="mailto:maciej.lacky@gmail.com">maciej.lacky@gmail.com</a></p>
+          </div>
           <div class="panel-background">
             
           </div>
@@ -27,11 +50,10 @@
           </div>
           <div class="circle-one"></div>
           <div class="circle-two"></div>
-          <div class="circle-three"></div>
           <div class="circle-four"></div>
           <h1>Cześć!<br/> Jestem Maciek.</h1>
           <h2>pasjonat UX design i programowania</h2>
-          <a href="#" class='btn-grad'>O mnie</a> 
+          <a href="About/index.html" class='btn-grad'>O mnie</a> 
           <div class="panel">
             <img src="./img/irvan-smith-5eBW5GomfhY-unsplash.jpg">
             <p>
@@ -45,13 +67,20 @@
               inventore illum! Libero nisi optio consequuntur tenetur soluta
               debitis <br/>
             </p> 
-            <a href="#" class='btn-grad-light'>Zobacz moje portfolio...</a> 
+            <a href="/MyWork/index.html" class='btn-grad-light'>Moje projekty ></a> 
           </div>
         </div>
        
       </section>
       <section class="section">
         <div class="s2">
+          <div class="btn-menu">
+            <span  onclick="openNav()">&#9776;</span>
+           
+          </div>
+          <div class="panel-background">
+            
+          </div>
           <div class="circle"></div>
           <h1>Aplikacje <br/> desktopowe</h1>
           <div class="description">
@@ -66,13 +95,25 @@
               tempore beatae rerum impedit quasi id iste sapiente, amet asperiores
               maxime eius.
             </p>
+            
           </div>
-          <img src="./img/CloudaDesktop.png" class="chair c2" />
+          <a href="#" class='btn-grad'>O mnie</a> 
+          <img src="./img/CloudaDesktop.png" class="img-one c2" />
+          <a href="#" class='btn-grad-light'>Zobacz filmik demo ></a> 
+          
           
         </div>      
       </section>
       <section class="section">
         <div class="s3">
+          <div class="panel-background">
+            
+          </div>
+          <div class="btn-menu">
+
+            <span  onclick="openNav()">&#9776;</span>
+           
+          </div>
           <div class="circle"></div>
             <h1>Aplikacje <br/> mobilne</h1>
             <div class="description">
@@ -88,40 +129,79 @@
                 maxime eius.
               </p>
           </div>
+          <a href="#" class='btn-grad'>O mnie</a> 
           <img src="./img/CloudALog.png" class="img-two" />
           
         </div>      
       </section>
       <section class="section">
         <div class="s4">
+          <div class="panel-background">
+            
+          </div>
+          <div class="btn-menu">
+
+            <span  onclick="openNav()">&#9776;</span>
+           
+          </div>
           <div class="circle"></div>
           <div class="circle-s4-one"></div>
           <div class="circle-s4-two"></div>
-          <div class="circle-s4-three"></div>
+         
           <h1>Aplikacje <br/> internetowe</h1>
+          <div class="description">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non nam
+              inventore illum! Libero nisi optio consequuntur tenetur soluta
+              debitis
+            </p>
+            <p>
+              saepe eligendi, dicta velit at quod dolores asperiores facilis
+              nostrum eius molestias et maxime earum? Tenetur nam magni quae
+              tempore beatae rerum impedit quasi id iste sapiente, amet asperiores
+              maxime eius.
+            </p>
+         </div>
           <div class="panel first-panel">
-           
-            
-            
-           
+           <img src="/img/wsb.png">
+           <h2>Strona uczelni wyższej</h2>
+           <p>Główna strona internetowa uczelni wyższej. Strona w 100% responsive, HTML, CSS, JavaScript, GSAP, One Page Scroll</p>
+            <a href="/WSB/index.html" class='btn-grad'>Demo</a> 
           </div>
           <div class="panel second-panel">
-           
-            
-            
-           
+            <img src="/img/cloudA-image.png">
+            <h2>Interfejs użytkownika</h2>
+            <p>System zarządzania uczelnią, interfejs użytkownika w stylu neumorphism. 100% responsive, HTML, CSS, JavaScript</p>
+            <a href="/CloudA/index.html" class='btn-grad'>Demo</a> 
           </div>
           <div class="panel third-panel">
-           
-            
-            
-           
+            <img src="/img/metal-work.png">
+            <h2>Strona firmy usługowej</h2>
+            <p>Strona internetowa przedstwiająca portfolio firmy usługowej. 100% responsive, HTML, CSS, JavaScript, GSAPt</p>
+            <a href="/MetalWork/index.html" class='btn-grad'>Demo</a> 
           </div>
-          
+          <div class="social-footer">
+            <a href="https://www.facebook.com/maciej.lacki.5" class="fa fa-facebook"></a>
+            <a href="https://github.com/MaciejLacky" class="fa fa-github"></a>
+            <a href="https://www.linkedin.com/in/maciej-%C5%82%C4%85cki-ba57b0193/" class="fa fa-linkedin"></a>
+          </div>
+          <footer>
+            <div>
+              <p>design by: uXme - Maciej Łącki</p>
+            </div>
+          </footer>
         </div>      
       </section>
     </div>
-
+    <script>
+      function openNav() {
+        document.getElementById("myNav").style.width = "100%";
+      }
+      
+      function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+      }
+      </script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"
       integrity="sha256-fIkQKQryItPqpaWZbtwG25Jp2p5ujqo/NwJrfqAB+Qk="
@@ -134,5 +214,6 @@
     ></script>
     <script src="./fullpage.min.js"></script>
     <script src="app.js"></script>
+    
   </body>
 </html>

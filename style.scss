@@ -47,6 +47,7 @@
     height: 100%;
     
    }
+
   .panel {
     background-image: linear-gradient(
       to bottom right,
@@ -80,6 +81,7 @@
     
     
   }
+
  
   .btn-grad:hover {
     background-position: right center; /* change the direction of the change here */
@@ -96,6 +98,10 @@
         -webkit-text-fill-color: transparent;
 
   }
+  .section{
+    width: 100vw;
+    height: 100vh;
+  }
 
   .s1, .s2, .s3, .s4{
     
@@ -103,7 +109,97 @@
     grid-template-rows: 10vh 1fr 10vh ;
   }
 
+  .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background:  linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);;
+    transition: ease 0.5s;
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+
   
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+    color: $h1-color;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+
+  
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+  }
+  .social-icons{
+    margin-top: 25vh;
+    margin-left: 80vw;
+    a{
+      margin-left: 1vw;
+    }
+   
+  }
+  .fa {
+    padding: 20px;
+    font-size: 1.5vw;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+    float: left;
+   
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .fa-github {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
   .s1 .logo{
     grid-row: 1/2;
     grid-column: 1/2;
@@ -119,22 +215,42 @@
     span{
         background: $logo-color;
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent; 
+        -webkit-text-fill-color: transparent;   
     }
   
+  }
+  .btn-menu{
+    grid-row: 1/2;
+    grid-column: 2/3;
+    z-index: 10;
+    cursor: pointer;
+    span{
+      font-size: $h1-size;
+      float: right;
+      margin-right: 3vw;
+    }
+    p{
+      float: left;
+      margin-top: 2vw;
+      a{
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
+  .s1 i{
+    float: left;
+    margin-top: 2vw ;
+    padding-left: 2vw;
   }
   .s1 img{
     grid-row: 1/3;
     grid-column: 2/3;
     width: 100%;
     height: 100%;
-    //border-top-left-radius: 300px ;
-    // border-top-right-radius: 300px ;
-    // border-bottom-right-radius: 300px ;
     border-bottom-left-radius: 300px ;
     z-index: 0;
-    
-   
+
   }
   .s1 h1 {
     grid-row: 2/3;
@@ -208,11 +324,11 @@
     grid-row: 2/3;
     grid-column: 2/3;
       position: relative;
-      top:-20%;
-      left: -10%;
+      top:-30%;
+      left: 80%;
       z-index: 0;
-      width: 70%;
-      height: 70%;
+      width: 60%;
+      height: 60%;
       border-radius: 70% ;
       background-image: linear-gradient( 135deg, #E8D07A 10%, #5312D6 100%);
       box-shadow: $circle-shadow;
@@ -255,17 +371,29 @@
     z-index: 2;
   
    }
-  
+   
+  .s2 .panel-background{
+    position: relative;
+    grid-row: 1/4;
+    grid-column: 1/2;
+    width: 80%;
+    z-index: 1;
+    border-bottom-right-radius: 60px;
+    border-bottom-right-radius: 300px;
+  }
   .s2 .circle{
     grid-row: 2/3;
     grid-column: 1/2;
-    top: 45%;
-    left: 5%;
+    top: -25%;
+    left: -10%;
+    width: 70%;
+    height: 70%;
     box-shadow: $circle-shadow;
   }
   .s2 h1 {
     grid-row: 2/3;
     grid-column: 1/2;
+    z-index: 3;
     font-size: $h1-size;
     font-weight: 900;
     padding-top: 10vh;
@@ -278,7 +406,7 @@
     grid-row: 2/3;
     grid-column: 1/2;
     margin-top: 20vw;
-    width: 80%;
+    width: 50%;
     margin-left: 6vw;
     z-index: 2;
     
@@ -286,17 +414,44 @@
   .description p {
    
   }
+  .s2 .btn-grad{
+    
+    grid-row: 2/3;
+    grid-column: 1/2;
+    z-index: 10;
+    margin-top: 70vh;
+    margin-left: 20vw;
+    cursor: pointer;
+  }
+  .s2 .btn-grad-light{
+    position: relative;
+    grid-row: 2/3;
+    grid-column: 2/3;
+    margin-top: 75vh;
+    margin-left: 25vw ;
+    font-size: 1.5vw;  
+  }
   .s2 img{
     grid-row: 2/3;
     grid-column: 2/3;
     width: 100%;
     height: 80%;
   }
+  .s3 .panel-background{
+    position: relative;
+    grid-row: 1/4;
+    grid-column: 2/3;
+    width: 100%;
+    z-index: 1;
+    border-top-left-radius: 300px;
+  }
   .s3 .circle{
     grid-row: 2/3;
-    grid-column: 1/2;
+    grid-column: 2/3;
+    width: 80%;
+    height: 80%;
     top: 45%;
-    left: 5%;
+    left: 30%;
     box-shadow: $circle-shadow;
     
   }
@@ -312,25 +467,43 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-
+  .s3 .btn-grad{
+    
+    grid-row: 2/3;
+    grid-column: 1/2;
+    z-index: 10;
+    margin-top: 70vh;
+    margin-left: 20vw;
+    cursor: pointer;
+  }
   .s3 img{
     grid-row: 2/3;
     grid-column: 2/3;
     width: 70%;
     height: 90%;
     margin-left: 10vw;
+    z-index: 2;
+  }
+  .s4 .panel-background{
+    position: relative;
+    grid-row: 1/4;
+    grid-column: 1/3;
+    width: 100%;
+    z-index: 1;
   }
   .s4 .circle{
     grid-row: 2/4;
     grid-column: 1/2;
-    top: 45%;
-    left: 5%;
+    top: 5%;
+    left: -15%;
+    width: 60%;
     box-shadow: $circle-shadow;
   }
   .s4 h1 {
     grid-row: 2/4;
     grid-column: 1/3;
     font-size: $h1-size;
+    z-index: 2;
     font-weight: 900;
     padding-top: 0vh;
     padding-left: 6vw;
@@ -338,17 +511,24 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+  .s4 .description{
+    grid-row: 2/3;
+    grid-column: 2/4;
+    margin-top: 0vw;
+    width: 60%;
+  }
+
 
   .circle-s4-one{
     
     grid-row: 2/4;
     grid-column: 1/2;
-    top: 60%;
-    left: 45%;
+    top: 10%;
+    left: 40%;
     position: relative;
       z-index: 0;
-      width: 50%;
-      height: 50%;
+      width: 60%;
+      height: 60%;
       border-radius: 80% ;
       background-image: $circle-color;
       box-shadow: $circle-shadow;
@@ -358,31 +538,18 @@
     
     grid-row: 2/4;
     grid-column: 1/2;
-    top: 30%;
-    left: 85%;
+    top: 40%;
+    left: -10%;
     position: relative;
       z-index: 0;
-      width: 40%;
-      height: 40%;
+      width: 80%;
+      height: 80%;
       border-radius: 60% ;
       background-image: $circle-color;
       box-shadow: $circle-shadow;
   }
 
-  .circle-s4-three{
-    
-    grid-row: 2/4;
-    grid-column: 2/3;
-    top: 40%;
-    left: 40%;
-    position: relative;
-      z-index: 0;
-      width:60%;
-      height: 60%;
-      border-radius: 80% ;
-      background-image: $circle-color;
-      box-shadow: $circle-shadow;
-  }
+
 
   .s4 .panel{
    
@@ -392,32 +559,71 @@
     height: 55vh;
     padding: 0;
     margin: 2vw;
+    z-index: 2;
   }
   .first-panel{
     left: 5%;
     top:25%;
+    z-index: 2;
+    p, h2{
+      padding: 1vw;
+    }
   }
 
   .second-panel{
     left: 30%;
     top:25%;
+    z-index: 2;
+    p, h2{
+      padding: 1vw;
+    }
   }
   .third-panel{
     left: 55%;
     top:25%;
+    z-index: 2;
+    p, h2{
+      padding: 1vw;
+    }
     
   }
 
   .s4 .panel img{
-    width: 60%;
-   
-    border-radius: 60px;
+    width: 100%;
+    height: 40%;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
    }
+
  
    .s4 .panel .btn-grad{
-     
+     width: 40%;
+     height: 10%;
+     padding-bottom: 2vw;
      float: right;
      margin-right: 6vw;
+    }
+    footer{
+      grid-row: 3/4;
+      grid-column: 1/3;
+      z-index: 3;
+      margin-top: 1vw ;
+      margin-left: 46vw;
+      p{
+        font-size: 12px;
+      }
+    }
+    .social-footer{
+     margin-left: 30vw;
+     margin-top: 75vh;
+      grid-row: 2/3;
+      grid-column: 2/3;
+      z-index: 2;
+      
+      a{
+        margin-left: 2vw;
+        padding-right: 2vw;
+      }
     }
 
 

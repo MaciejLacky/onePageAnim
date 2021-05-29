@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>  
+    <link rel="stylesheet" href="/WSB/css/style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="WSB-NLU" />
+    <script src="/WSB/js/pagescroll.js"></script>   
+    <title>WSB-NLU</title>
+  </head>
+  <body>
+    <nav>
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+              <div class="overlay-content-sidebar">
+                <a class="sidebar-link" href="#">O uczelni</a>
+                <a class="sidebar-link" href="#">Władze</a>
+                <a class="sidebar-link" href="#">Absolwenci</a>
+                <a class="sidebar-link" href="#">Cloud Academy</a>
+                <a class="sidebar-link" href="#">Biblioteka</a>
+                <a class="sidebar-link" href="#">Wydarzenia</a>
+                <a class="sidebar-link" href="#">Dziecięcy uniwersytet</a>
+                <a class="sidebar-link" href="#">Run 4aSmile</a>
+                <a class="sidebar-link" href="#">Potęga informatyki</a>
+                <a class="sidebar-link" href="#">International cooking day</a>
+                <a class="sidebar-link" href="#">ItSec 4You</a>
+                <a class="sidebar-link" href="#">Postaw na przedsiębiorczość</a>
+                <a class="sidebar-link" href="#">Centrum Badań i Programowania</a>
+                <a class="sidebar-link" href="#">Instytut Badań i Komercjalizacji</a>
+                <a class="sidebar-link" href="#">Instytut Diagnostyki, Opiniodastwa i Pomocy Psychologicznej</a>
+                <a class="sidebar-link" href="#">UWE</a>
+                <a class="sidebar-link" href="#">Kariera</a>
+                <a class="sidebar-link" href="#">Kontakt</a>
+              </div>
+              <div class="main-link"></div>
+                <button class="accordion " href="#">Oferta edukacyjna <i class="fa fa-caret-down"></i></button>
+              <div class="panel">
+                <a  href="#">Psychologia</a>
+                <a  href="#">Zarządzanie</a>
+                <a  href="#">Informatyka</a>
+                <a  href="#">Studia podyplomowe</a>
+                <a  href="#">Kursy</a>
+              </div>
+              <button class="accordion" href="#">Dla kandydata <i class="fa fa-caret-down"></i></button>
+              <div class="panel">
+                <a  href="#">Rada uczelniana</a>
+                <a  href="#">Studenci</a>
+                <a  href="#">Stypendia</a>
+                <a  href="#">Praktyki zawodowe</a>
+                <a  href="#">Formy studiowania</a>
+                <a  href="#">Dokumenty zagraniczne</a>
+              </div>
+              <button class="accordion" href="#">Dołącz do nas <i class="fa fa-caret-down"></i></button>
+              <div class="panel">
+                <a  href="#">Rekrutacja</a>
+                <a  href="#">Uznanie zawodowe</a>
+                <a  href="#">Reaktywacja</a>
+                <a  href="#">Transfer z innej uczelni</a>
+                <a  href="#">ERASMUS+</a>
+              </div>
+              <button class="accordion add-menuResp" href="#">O nas <i class="fa fa-caret-down"></i></button>
+          <div class="panel">
+            <a href="#">O uczelni</a>
+            <a href="#">Władze</a>
+            <a href="#">Absolwenci</a>           
+            <a href="#">Biblioteka</a>
+            <a href="#">Kariera</a>
+            <a href="#">Kontakt</a>
+          </div>
+          <button class="accordion add-menuResp" href="#">Wydarzenia <i class="fa fa-caret-down"></i></button>
+          <div class="panel">
+            <a href="#">Wydarzenia</a>
+            <a href="#">Dziecięcy uniwersytet</a>
+            <a href="#">Run 4aSmile</a>
+            <a href="#">Potęga informatyki</a>
+            <a href="#">International cooking day</a>
+            <a href="#">ItSec 4You</a>
+            <a href="#">Postaw na przedsiębiorczość</a>
+          </div>
+          <button class="accordion add-menuResp" href="#">Instytuty <i class="fa fa-caret-down"></i></button>
+          <div class="panel">
+            <a href="#">Centrum Badań i Programowania</a>
+            <a href="#">Instytut Badań i Komercjalizacji</a>
+            <a href="#">Instytut Diagnostyki, Opiniodastwa i Pomocy Psychologicznej</a>
+            <a href="#">UWE</a>
+          </div>
+              <button class="accordion" href="#">Zaloguj w CloudA </button>
+              <div class="social-section-menu">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+                <a href="#" class="fa fa-youtube"></a>
+                <a href="#" class="fa fa-instagram"></a>
+              </div>
+              <div style="clear: both;"></div>
+              </div>
+             
+            </div>
+        </div> 
+    </nav>
+    <div id="navbar">
+        <a href="index.html" > <img id="logo" class="logoSize" src="/WSB/img/wsblogo2.png"></a>
+        <div id="navbar-right">
+            <span class="openNav-page seq" onclick="openNav()">&#9776</span> 
+        </div>
+    </div>
+    <div class="container-img-top">
+        <img src="/WSB/img/abstract-grey.jpg" alt="concrete-wall">       
+        <div class="text-block-img-top">
+          <h2>Informatyka</h2>
+          <h3>Programowanie aplikacji <br/> biznesowych</h3>
+          <p>Studia pierwszego stopnia (inżynierskie)</p>
+          <img class="img-top" src="/WSB/img/informatyka.jpg" alt="programowanie-aplikacji">
+          <div class="img-decoration"></div>
+        </div>
+    </div>
+    <div class="main">
+        <button class="tablink" onclick="openPage('Home', this, ' #203866')" id="defaultOpen">O studiach</button>
+        <button class="tablink" onclick="openPage('News', this, '#777')" >Program</button>
+        <button class="tablink" onclick="openPage('Contact', this, '#777')">Forma studiów</button>
+        <button class="tablink" onclick="openPage('About', this, '#777')">Zatrudnienie</button>
+<div id="Home" class="tabcontent">
+  <h3>Na specjalności Programista aplikacji biznesowych uczymy projektowania zaawansowanych aplikacji dla biznesu.</h3>
+  <p>Rynek pracy jest przepełniony ofertami branżowymi, dlatego wychodzimy naprzeciw oczekiwaniom pracodawców i osób, które chcą mieć pewność, że ukończony kierunek studiów i zdobyta wiedza da im pewny start na ścieżce zawodowej. Absolwent, który ukończy kierunek programisty aplikacji biznesowych na studiach inżynierskich zdobędzie nie tylko dokumenty umożliwiające podjęcie pracy na tym stanowisku, ale także wiedzę i pełen wachlarz umiejętności zawodowych, które umożliwią mu dalszy rozwój. </p>
+  <h3>Dla kogo skierowane są studia inżynierskie o specjalności Programista Aplikacji Biznesowych?</h3>
+  <p>Studia o specjalności Programista Aplikacji Biznesowych skierowane są dla miłośników informatyki, komputerów oraz internetu. To mocno praktyczny kierunek, w którym stawiamy przede wszystkim na zdobycie umiejętności pisania aplikacji biznesowych. Dzięki studiom na WSB-NLU bez trudu opanujesz wiedzę niezbędną w pracy programisty. Studia Programista Aplikacji Biznesowych adresowane są dla tych, którzy chcą nauczyć się tworzenia aplikacji mobilnych i internetowych, a także przygotować się praktycznie do zawodu programisty.</p>
+</div>
+<div id="News" class="tabcontent">
+  <h3>Program studiów Programista Aplikacji Biznesowych</h3>
+  <p>W czasie studiów o specjalności Programista Aplikacja Biznesowych na WSB-NLU, nasi studenci realizują programowanie zaawansowanej aplikacji biznesowej. Pracując zgodnie z zasadami, które obowiązują w profesjonalnych zespołach programistycznych największych firm wytwarzających oprogramowania. Nauka programowania jest silnie połączona z realizacją projektu.<br/>
+    <br/>
+    Oprócz tego, w trakcie całego toku studiów, studenci kierunku Informatyka o specjalności Programista Aplikacji Biznesowych, będą brać udział w zajęciach jak:<br/></p>
+    <div>
+        <ul style="float: left; text-align: left; list-style-type:none">
+            <li>Narzędzia informatyki,</li>
+            <li>Matematyka dyskretna,</li>
+            <li>Algorytmy i struktury danych,</li>
+            <li>Programowanie w C++,</li>
+            <li>Statystyka,</li>
+            <li>Podstawy inżynierii oprogramowania,</li>
+            <li>Podstawy elektroniki i techniki cyfrowej,</li>     
+        </ul>     
+        <ul style="float: right; text-align: left; padding-right: 10vw; list-style-type:none ">
+            <li>Tworzenie interfejsów użytkownika,</li>
+            <li>Zarządzanie projektami,</li>
+            <li>Grafika komputerowa,</li>
+            <li>Programowanie w PHP,</li>
+            <li>Programowanie desktopowych aplikacji biznesowych,</li>
+            <li>Projektowanie mobilnych aplikacji biznesowych,</li>
+            <li>Programowanie zaawansowanych serwisów internetowych.</li>
+        </ul>
+        <div style="clear: both;"></div>
+    </div>
+</div>
+<div id="Contact" class="tabcontent">
+  <h3>Forma studiów inżynierskich</h3>
+  <p style="text-align: left;">Studia inżynierskie I stopnia, które prowadzone są na uczelni <strong>WSB-NLU w Nowym Sączu</strong> dostępne są w trzech formach jako:</p>
+  <ul style="text-align: left;">
+    <li>studia stacjonarnych (prowadzonych na terenie kampusu w Nowym Sączu),</li>
+    <li>studia niestacjonarne (odbywające się w formie fizycznej w Nowym Sączu lub w filii zamiejscowej),</li>
+    <li>studia interaktywne – RealTime Online (transmitowane w czasie rzeczywistym za pośrednictwem platformy<strong> 
+        <a href="https://www.uwe.edu.pl/pl/cloud-academy">CloudA™</a></strong>).</li>
+   </ul>
+   <h3 style="text-align: left;">Jak długo trwają studia inżynierskie I stopnia?</h3>
+   <p style="text-align: left;">Studia inżynierskie I stopnia na kierunku Programista Aplikacji Biznesowych trwają 7 semestrów.</p>
+   <h3 style="text-align: left;">Koszt studiów Programista Aplikacji Biznesowych</h3>
+   <p style="text-align: left;">Czesne za studia inżynierskie płatne są w jednej, dwóch lub dziesięciu ratach. Opłaty za języki obce są wliczone w koszty czesnego. Pełen cennik można znaleźć tutaj: <a href="../../formy-studiowania">https://itcloud.wsb-nlu.edu.pl/s/6LaC8tKFLxHZ6yM/download</a></p>
+   <p>
+   </p>
+</div>
+<div id="About" class="tabcontent">
+  <h3>Jakie kompetencje zyskuje absolwent studiów inżynierskich?</h3>
+  <div class="col s12 tesktSzablon  " style="color: black;background-color: white">
+    <p style="text-align: justify;">Ogromną zaletą studiów na <strong>WSB-NLU</strong> jest praktyczne podejście do nauki. Nie przekazujemy wyłącznie wiedzy podręcznikowej – stawiamy na zdobycie prawdziwego doświadczenia. Dlatego po zakończeniu studiów i specjalności Programista aplikacji biznesowych nasi absolwenci są w pełni przygotowani do pracy w zawodzie. Przy tworzeniu specjalności <strong>WSB-NLU</strong> stawia duży nacisk na zdobycie przez studentów umiejętności programistycznych w językach C++, UML, JAVA, SQL.</p>
+    <p style="text-align: justify;">Patronat nad naszą specjalnością Programista aplikacji biznesowych objęło <strong>Centrum Badań i Programowania WSB-NLU.</strong> Dodatkowo studenci po zakończeniu studiów otrzymują, oprócz dyplomu, specjalne zaświadczenia Microsoft potwierdzające jakość kształcenia.</p>
+    <h3>Perspektywy zawodowe po ukończeniu specjalności Programista Aplikacji Biznesowych</h3>
+    <p style="text-align: justify;">Absolwenci <strong>WSB-NLU</strong> na kierunku Programista Aplikacji Biznesowych kończąc studia są znakomicie przygotowani do podjęcia pracy jako programiści. Maja szansę znaleźć zatrudnienie jako:</p>
+    <ul>
+        <li>Software Engineer,</li>
+        <li>Developer,</li>
+        <li>Tester aplikacji,</li>
+        <li>Software Architect,</li>
+        <li>.Net Developer,</li>
+        <li>UI Designer,</li>
+        <li>Backend Developer,</li>
+        <li>System Engineer,</li>
+        <li>Web Developer.</li>
+    </ul>
+</div>
+</div>
+<div class="img-main-content">   
+    <div class="content-top">
+      <img src="/WSB/img/programista-aplikacji-biznesowych.webp">    
+        <h2>Dlaczego warto <br/>studiować u nas?</h2>
+        <h3>Studia informatyczne realizowane są w 1/3 za pomocą innowacyjnej metody Project-Base Learning, czyli zarządzaniem przez projekt.</h3>
+        <button href="#">Dołącz do nas</button>
+    </div>    
+</div>
+<div style="clear: both;"></div>
+<div class="other-studies">
+    <div class="cards-tech">
+        <div class="card-tech content">
+          <div class="card-tech-content">
+            <div class="card-tech-img">
+              <img src="/WSB/img/intro1.webp" alt="game-developer">
+            </div>
+            <div class="card-tech-label">Katalog kursów</div>
+            <div class="card-tech-title">
+                Sprawdź naszą pozostałą ofertę studiów.
+            </div>
+          </div>
+        </div>
+        <div class="card-tech content">
+          <div class="card-tech-content">
+            <div class="card-tech-img">
+              <img src="/WSB/img/Clouda.jpg" alt="cyberbezpieczenstwo">
+            </div>
+            <div class="card-tech-label">
+              Studia online
+            </div>
+            <div class="card-tech-title">
+                Nawet nie musisz wychodzić z domu! Zobacz jak działa nasz innowacyjny system nauczania online.
+            </div>
+          </div>
+        </div>     
+    </div> 
+</div>
+<div class="img-main-content-second"> 
+    <div class="content-second">
+      <img src="/WSB/img/wsbshow.jpg" alt="wsb-ivent">
+        <h2>Dlaczego my?</h2>
+        <p>Mocno wierzymy, że to właśnie praktyczne zajęcia, które zapewniają rozwój doświadczenia, są najlepszą receptą na sukces. Jednocześnie wiemy, że uczyć efektywnie można się właściwie w każdym miejscu, a współcześni uczniowie nie muszą być przywiązani do murów uczelni. Właśnie dlatego zadbaliśmy o to, by studenci naszej Wyższej Szkoły Biznesu mogli korzystać z innowacyjnej platformy informacyjnej Cloud Academy. Ten nowoczesny system pozwala na komfortowe i kompleksowe zarządzanie tokiem studiów - znajdziesz tu m.in. swoje oceny, niezbędne materiały dydaktyczne, a także wszelkie interesujące aktualności związane z uczelnią. Wygodne powiadomienia push poinformują Cię o wszystkich najważniejszych zdarzeniach, dzięki czemu nie umknie Ci żadna zmiana w planie czy też dodatkowe zadanie. Z kolei dzięki szybkiemu systemowi składania wniosków i podań ograniczysz czas spędzony w dziekanacie do minimum. Kluczową funkcją platformy Cloud Academy jest także moduł multitransmisja, który zapewnia możliwość przeprowadzania zajęć na odległość. Opcja ta pozwala na uczestnictwo zarówno w wykładach, jak i ćwiczeniach. Dzięki innowacyjnemu i interaktywnemu rozwiązaniu, jakim jest system Cloud Academy, możesz studiować na Wyższej Szkole Biznesu właściwie z każdego miejsca - wystarczy Ci jedynie dostęp do internetu oraz urządzenie, które pozwoli na aktywne branie udziału w zajęciach. Taka opcja jest doskonała szczególnie dla osób, które nie są w stanie regularnie dojeżdżać na stacjonarne zajęcia. Warto pamiętać, że nasza uczelnia posiada swoje oddziały również w innych częściach Polski. Wszystkie zainteresowane osoby zachęcamy do zapoznania się z ofertą naszych szkół, które są zlokalizowane w Warszawie , Krakowie, Radomiu, a także Tarnowie. Wypełnij podanie już dziś!</p>
+        <button href="#" class="content-second-button">O nas</button>  
+    </div>    
+</div>
+</div> 
+<footer>
+  <div class="section-four-bottom-dark-page" >                
+    <ul class="footers-ul-page">
+      <li><a data-href="https://www.nl.edu/" href="https://www.nl.edu/" rel="nofollow" class="grey-text text-lighten-3 pointer sekcjaLink">National Louis University </a></li>
+      <li><a data-href="/centrum-rekreacji-olimp-wsb-nlu" href="/centrum-rekreacji-olimp-wsb-nlu" rel="nofollow" class="grey-text text-lighten-3 pointer sekcjaLink">Centrum Rekreacyjne "OLIMP"</a></li>
+      <li><a data-href="https://biblioteka.wsb-nlu.edu.pl/" href="https://biblioteka.wsb-nlu.edu.pl/" class="grey-text text-lighten-3 pointer sekcjaLink">Biblioteka</a></li>
+      <li><a data-href="http://repozytorium.wsb-nlu.edu.pl/" href="http://repozytorium.wsb-nlu.edu.pl/" class="grey-text text-lighten-3 pointer sekcjaLink">Repozytorium WSB-NLU</a></li>
+      <li><a data-href="http://vaks.pl/enova" href="http://vaks.pl/enova" rel="nofollow" class="grey-text text-lighten-3 pointer sekcjaLink">Enova - partner uczelni</a></li>      
+    </ul>
+    <ul class="footers-ul-page">    
+      <li><a data-href="/skeo" href="/skeo" rel="nofollow" class="grey-text text-lighten-3 pointer sekcjaLink">Sądecki Klaster Energii Odnawialnej</a></li>
+      <li><a data-href="/prywatnosc" href="/prywatnosc" rel="nofollow" class="grey-text text-lighten-3 pointer sekcjaLink">Polityka prywatności</a></li>
+      <li><a data-href="/klauzula-informacyjna-rodo" href="/klauzula-informacyjna-rodo" rel="nofollow" class="grey-text text-lighten-3 pointer sekcjaLink">Klauzula informacyjna - RODO</a></li>
+      <li><a data-href="/klauzula-informacyjna-rodo-ibik" href="/klauzula-informacyjna-rodo-ibik" rel="nofollow" class="grey-text text-lighten-3 pointer sekcjaLink">Klauzula informacyjna - RODO IBIK</a></li>
+      <li><a data-href="https://wsb-nlu.bip.gov.pl/" href="https://wsb-nlu.bip.gov.pl/" rel="nofollow" class="grey-text text-lighten-3 pointer sekcjaLink">Biuletyn Informacji Publicznej WSB-NLU</a></li>
+    </ul>
+    <div class="social-section">
+      <a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-linkedin"></a>
+      <a href="#" class="fa fa-youtube"></a>
+      <a href="#" class="fa fa-instagram"></a>
+    </div>
+  </div>
+  <div class="footer-section-page">
+      <p>© 2021 WYŻSZA SZKOŁA BIZNESU - NATIONAL LOUIS UNIVERSITY <br/>  
+        ul. Zielona 27, 33-300 Nowy Sącz, Małopolska, tel. +48 18 44 99 100, NIP: 734-10-03-635</p>
+  </div>                
+</footer> 
+  <script src="/WSB/js/toggleIconMenu.js"></script>     
+  <script src="/WSB/js/tabCards.js"></script>
+  <script src="/WSB/js/menuBar.js"></script>
+  <script src="/WSB/js/mainMenuAccordion.js"></script>
+  </body>
+</html>

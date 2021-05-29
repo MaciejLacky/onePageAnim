@@ -1,0 +1,1494 @@
+/* Main page */
+
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+$ruler: 1vw;
+$rulerx2: 1.4vw;
+$color-main: #0277bd;
+$color-bg: #EBECF0;
+$color-shadow: #BABECC;
+$color-white: #FFF;
+$color-black:#000000;
+$color-second: #61677C;
+$color-linear: linear-gradient( to right, rgb(2, 119, 189) , rgb(99, 166, 48));
+$color-linear-short: linear-gradient( to right, rgb(2, 119, 189) -20% , rgb(99, 166, 48)60%);
+
+
+
+body, html {
+  background-color:$color-bg;
+}
+
+body, p, input, select, textarea, button {
+    
+    letter-spacing: -0.2px;
+    font-size: $ruler;
+}
+
+
+div, p {
+  color: $color-shadow;
+  text-shadow: 1px 1px 1px $color-white;
+}
+.text-linear-gradient {
+	//text-transform: uppercase;
+	background: $color-linear;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  text-shadow: none;
+}
+.text-linear-gradient-short {
+	//text-transform: uppercase;
+	background: $color-linear-short;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  text-shadow: none;
+}
+
+
+
+form {
+  padding: $ruler;
+  width: $ruler*20;
+  margin: 10% auto;
+}
+
+
+
+.segment {
+  padding: $ruler*2 0;
+  text-align: center;
+}
+.segment img{
+  width: 80%;
+}
+
+button, input {
+  border: 0;
+  outline: 0;
+  font-size: $ruler;
+  border-radius: $ruler*20;
+  padding: $ruler;
+  background-color:$color-bg;
+  text-shadow: 1px 1px 0 $color-white;
+}
+
+label {
+  display: block;
+  margin-bottom: $ruler*1.5;
+  //width: 100%;
+}
+
+input {
+  margin-right: $ruler/2;
+  box-shadow:  inset 2px 2px 5px $color-shadow, inset -5px -5px 10px $color-white;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  appearance: none;
+  -webkit-appearance: none;
+
+  &:focus {
+    box-shadow:  inset 1px 1px 2px $color-shadow, inset -1px -1px 2px $color-white;
+  }
+}
+
+button {
+  color:$color-second;
+  font-weight: bold;
+  box-shadow: -5px -5px 20px $color-white,  5px 5px 20px $color-shadow;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  font-weight: 600;
+  
+  &:hover {
+    box-shadow: -2px -2px 5px $color-white, 2px 2px 5px $color-shadow;
+  }
+  
+  &:active {
+    box-shadow: inset 1px 1px 2px $color-shadow, inset -1px -1px 2px $color-white;
+  }
+  
+  .icon {
+    margin-right: $ruler/2;
+  }
+  
+  &.unit {
+    border-radius: $ruler/2;
+    line-height: 0;
+    width: $ruler*3;
+    height: $ruler*3;
+    display:inline-flex;
+    justify-content: center;
+    align-items:center;
+    margin: 0 $ruler/2;
+    font-size: $ruler*1.5;
+    
+    .icon {
+      margin-right: 0; 
+    }
+  }
+  
+  &.color-main {
+    display: block;
+    width: 100%;
+    color:$color-main;
+    
+  }
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 22vw ;
+  
+  label {
+    margin: 0;
+    flex: 1;
+  }
+}
+@media  screen and(min-width: 992px) and(max-width: 1200px) {
+  body, button, input{
+    font-size: $ruler*1.4 !important;
+  }
+}
+@media  screen and(min-width: 768px) and(max-width: 992px) {
+  body, button, input{
+    font-size: $ruler*2 !important;
+  }
+}
+@media  screen and(min-width: 576px) and(max-width: 768px) {
+  body, button, input{
+    font-size: $ruler*3 !important;
+  }
+}
+@media  screen and(max-width: 576px) {
+  body, button, input{
+    font-size: $ruler*4 !important;
+  }
+}
+@media  screen and(min-width: 768px) and(max-width: 992px) {
+  .login button, .login input{
+    margin-left: -10vw;
+    margin-bottom: 4vw;
+    width: 40vw;
+    height: 8vw;
+  }
+}
+@media  screen and(min-width: 576px) and(max-width: 768px) {
+  .login button, .login input{
+    margin-left: -18vw;
+    margin-bottom: 2vw;
+    width: 50vw;
+    height: 10vw;
+  }
+}
+@media  screen and(max-width: 576px) {
+  .login button, .login input{
+    margin-left: -20vw;
+    margin-bottom: 5vw;
+    width: 60vw;
+    height: 15vw;
+  }
+}
+@media  screen and(min-width: 768px) and(max-width: 992px) {
+  .segment button{
+    display: inline;
+    margin-top: 3vw;
+    margin-right: -60px;
+    width: 60px;
+    height: 50px;
+  }
+}
+@media  screen and(min-width: 576px) and(max-width: 768px) {
+  .segment button{
+    display: inline;
+    margin-top: 5vw;
+    margin-right: -120px;
+    width: 60px;
+    height: 50px;
+  }
+}
+@media  screen and(max-width: 576px) {
+  .segment button{
+    display: inline;
+    margin-top: 5vw;
+    margin-right: -80px;
+    width: 40px;
+    height: 40px;
+  }
+}
+@media  screen and(min-width: 768px) and(max-width: 992px) {
+  .login img{
+    margin-left: -9vw;
+    width: 40vw;
+    height: 12vw;
+    margin-bottom: 5vw;
+  }
+}
+@media  screen and(min-width: 576px) and(max-width: 768px) {
+  .login img{
+    margin-left: -16vw;
+    width: 50vw;
+    height: 12vw;
+    margin-bottom: 5vw;
+  }
+}
+@media  screen and(max-width: 576px) {
+  .login img{
+    margin-left: -20vw;
+    width: 60vw;
+    height: 20vw;
+    margin-bottom: 10vw;
+  }
+}
+
+.link{
+ text-align: center;
+  
+}
+.link a{
+  text-decoration: none;
+  color:$color-second;
+}
+center{
+  color:$color-second;
+  font-size: 10px;
+}
+
+// UserPage style
+
+.main{
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 15vw 1fr;
+  grid-template-rows: 10vh 1fr ;
+}
+@media screen and (max-width: 768px) {
+  .main{
+    grid-template-columns: 1fr;
+  }
+}
+.menu-top{
+  color:$color-second;
+  grid-column: 1/3;
+  grid-row: 1/2; 
+  
+}
+.menu-top-grid{
+  display: grid;
+  grid-template-columns: 15vw 1fr 5vw 5vw 5vw 5vw;
+  justify-items: center;
+  align-items: center;
+}
+.menu-top a img{
+  width: 70%;
+  margin-left: 2vw;
+  margin-top: 1vw;
+  grid-column: 1/2;
+}
+@media  screen and(min-width: 576px) and(max-width: 768px) {
+  .menu-top a img{
+    width: 100%;
+  }
+}
+@media  screen and(max-width: 576px) {
+  .menu-top a img{
+    margin-top: 3vw;
+    width: 120%;
+  }
+}
+.user{
+ grid-column: 5/6;
+ width: 55%;
+ height: 55%;
+ padding: 0;
+ border-radius: 5px;
+ color: $color-second;
+ padding-top: 7px;
+ padding-left: 8px;
+ cursor: pointer;
+ transition: ease-in-out 0.4s;
+}
+@media  screen and(max-width: 992px) {
+  .user {
+    grid-column: 4/5;
+    margin-right: 4vw;
+  }
+}
+.user i{
+  font-size: $ruler*2 !important;
+  
+}
+.user:hover{
+  box-shadow: -2px -2px 5px $color-white, 2px 2px 5px $color-shadow;
+}
+.logout{
+  grid-column: 6/7;
+  width: 55%;
+  height: 55%;
+  padding: 0;
+  border-radius: 5px;
+  color: $color-second;
+  padding-top: 7px;
+  padding-left: 8px;
+  cursor: pointer;
+  transition: ease-in-out 0.4s;
+ }
+ @media  screen and(max-width: 992px) {
+  .logout {
+    grid-column: 5/6;
+
+  }
+}
+ .logout i{
+  font-size: $ruler*2!important;
+ }
+ .logout:hover{
+  box-shadow: -2px -2px 5px $color-white, 2px 2px 5px $color-shadow;
+}
+ .rus{
+  grid-column: 4/5;
+  width: 40%;
+  cursor: pointer;
+ }
+ .ang{
+  grid-column: 3/4;
+  width: 40%;
+  cursor: pointer;
+ }
+ @media  screen and(min-width: 992px) and(max-width: 1200px) {
+  .rus, .ang{
+    width: 50%;
+  }
+}
+@media  screen and(max-width: 992px){
+  .rus, .ang{
+    display: none;
+  }
+}
+@media  screen and(min-width: 768px) and(max-width: 992px) {
+  .user i, .logout i{
+    width: 60%;
+  }
+}
+@media  screen and(min-width: 576px) and(max-width: 768px) {
+  .user i, .logout i{
+    width: 70%;
+  }
+}
+@media  screen and(max-width: 576px) {
+  .user i, .logout i{
+    width: 80%;
+  }
+}
+
+.mobile-menu-button{
+  font-size:$ruler*8;
+  cursor: pointer;
+  color: $color-second;
+  margin-top: 3vw;
+  grid-column: 4/6;
+  padding: 0 5px;
+  box-shadow: 1px 1px 2px $color-shadow, -1px -1px 2px $color-white;
+}
+.mobile-menu-button:active{
+  box-shadow: inset 1px 1px 2px $color-shadow, inset -1px -1px 2px $color-white;
+}
+@media  screen  and(min-width: 768px) {
+  .mobile-menu-button{
+    display: none;
+  }
+}
+@media  screen and(min-width: 576px) and(max-width: 768px) {
+  .mobile-menu-button{
+    font-size: $ruler*4 !important;
+  }
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #EBECF0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  font-style: normal;
+  box-shadow: 1px 1px 2px $color-shadow, -1px -1px 2px $color-white;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: $color-second;
+  text-decoration: unset;
+}
+.card-menu-mobile{
+  box-shadow: inset 1px 1px 2px $color-shadow, inset -1px -1px 2px $color-white;
+  border-radius: 20px;
+}
+
+
+
+ @media  screen and(min-width: 992px) and(max-width: 1200px) {
+  .user i, .logout i{
+    font-size: $ruler*3 !important;
+  }
+}
+@media  screen and(min-width: 768px) and(max-width: 992px) {
+  .user i, .logout i{
+    font-size: $ruler*4 !important;
+  }
+}
+@media  screen  and(max-width: 768px) {
+  .user, .logout{
+    display: none;
+  }
+}
+
+ .tablink {
+  box-shadow: none;
+  cursor: pointer;
+  margin-left: 4vw;
+  min-width: 10vw;
+  transition: ease-in-out 0.4s;
+}
+
+.tablink:hover {
+  box-shadow: -2px -2px 5px $color-white, 2px 2px 5px $color-shadow;
+}
+.tablink:active {
+  box-shadow: inset 1px 1px 2px $color-shadow, inset -1px -1px 2px $color-white;
+}
+
+.tabcontent {
+  height: 100%
+ }
+ @media  screen and(min-width: 1200px) {
+  .tablink i{
+    display: none;
+  }
+}
+ @media  screen and(min-width: 992px) and(max-width: 1200px) {
+  .tablink i{
+    display: none;
+  }
+}
+@media  screen and(min-width: 768px) and(max-width: 992px) {
+  .tablink i{
+    font-size: $ruler*3 !important;
+    
+  }
+}
+@media  screen and(min-width: 768px) and(max-width: 992px) {
+  .tablink span{
+    display: none;
+    
+  }
+}
+@media  screen and(min-width: 576px) and(max-width: 768px) {
+  .tablink i{
+    font-size: $ruler*4 !important;
+    
+  }
+}
+@media  screen and(min-width: 576px) and(max-width: 768px) {
+  .tablink span{
+    display: none;
+  }
+}
+@media  screen and(max-width: 576px) {
+  .tablink span{
+    display: none;
+  }
+}
+@media  screen and(max-width: 576px) {
+  .tablink i{
+   
+    font-size: $ruler*6 !important;
+  }
+}
+@media  screen and(min-width: 576px) and(max-width: 768px) {
+  .tablink {
+    margin-top: 2vw;
+  }
+}
+@media  screen and(max-width: 576px) {
+  .tablink {
+    margin-top: 4vw;
+  }
+}
+
+.menu-side{
+  color:$color-second;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  margin-top: 2vh;
+}
+@media screen and (max-width: 768px) {
+  .menu-side{
+    display: none;
+  }
+}
+.card-menu li  {
+  
+  margin-left: 10%;
+  text-decoration: none;
+  height: 40px;
+  width: 80% ;
+  list-style-type: none;
+  padding-top: 5px;
+  padding-left: 10px;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: ease-in-out 0.4s;
+  font-style: normal;
+  transition: ease-in-out 0.5s;
+ 
+}
+.card-menu li:hover{
+  box-shadow: -2px -2px 5px $color-white, 2px 2px 5px $color-shadow;
+}
+.card-menu li a{
+  text-decoration: none;
+  color: $color-second;
+
+}
+.card-menu li a span{
+ padding-left: 5%;
+
+}
+@media  screen and(min-width: 576px) and(max-width: 768px) {
+  .card-menu li a i {
+    font-size: $ruler*4 !important;
+  }
+}
+@media  screen and(max-width: 576px) {
+  .card-menu li a i {
+    font-size: $ruler*6 !important;
+  }
+}
+.material-icons{
+  font-size: $ruler*1.2 !important;
+  
+}
+.social-menu{
+  float: left;
+  margin-top: 1vw;
+  margin-left: 1.5vw;
+  padding: auto;
+}
+.social-menu img{
+  padding-right: 1.25vw;
+}
+.social-menu:hover{
+  box-shadow: -2px -2px 5px $color-white, 2px 2px 5px $color-shadow;
+}
+
+
+
+.workspace{
+  color:$color-second;
+  border-top-left-radius: 30px;
+  box-shadow:  inset 2px 2px 5px $color-shadow, inset -5px -5px 10px $color-white;
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+@media  screen and(max-width: 768px) {
+  .workspace{
+    border-top-left-radius: 0px;
+  }
+}
+.workspace-grid{
+  //height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(10, 300px) ;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .workspace-grid{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .workspace-grid{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(20, 300px) ;
+  }
+}
+@media screen and (max-width: 576px) {
+  .workspace-grid{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(20, auto) ;
+  }
+}
+.card-main-left{
+  color:$color-second;
+  border-radius: 30px;
+  //box-shadow: inset -5px -5px 20px $color-white, inset 5px 5px 20px $color-shadow;
+  align-self: center;
+  justify-self: center;
+  width: 90%;
+  height: 80%;
+  //grid-row: 1/2;
+  grid-column: 1/2;
+}
+.card-main-right{
+  color:$color-second;
+  border-radius: 30px;
+  box-shadow: inset -5px -5px 20px $color-white,  inset 5px 5px 20px $color-shadow;
+  align-self: center;
+  justify-self: center;
+  width: 90%;
+  height: 90%;
+  grid-row: 1/3;
+  grid-column: 2/3;
+}
+
+@media screen and (max-width: 768px) {
+  .card-main-right{
+    grid-row: 3/5;
+    grid-column: 1/2;
+  }
+}
+@media  screen and(max-width: 576px) {
+  .card-main-right {
+    margin-top: 20px;
+   height: 350px;
+  }
+}
+.card-main-a{
+  color:$color-second;
+  border-radius: 30px;
+  box-shadow: -2px -2px 5px $color-white, 2px 2px 5px $color-shadow;
+  align-self: center;
+  justify-self: center;
+  width: 95%;
+  height: 90%;
+  //grid-row: 2/3;
+  grid-column: 1/3;
+}
+
+.card-main-b{
+  color:$color-second;
+  border-radius: 30px;
+  box-shadow: -2px -2px 5px $color-white, 2px 2px 5px $color-shadow;
+  align-self: center;
+  justify-self: center;
+  width: 95%;
+  height: 80%;
+  grid-row: 3/4;
+  grid-column: 1/3;
+}
+.card-main-c{
+  color:$color-second;
+  border-radius: 30px;
+  box-shadow: -2px -2px 5px $color-white, 2px 2px 5px $color-shadow;
+  align-self: center;
+  justify-self: center;
+  width: 95%;
+  height: 80%;
+  grid-row: 4/5;
+  grid-column: 1/3;
+}
+
+
+.card-second-a{
+  align-self: center;
+  justify-self: center;
+  color:$color-second;
+  border-radius: 30px;
+  box-shadow: -2px -2px 5px $color-white, 2px 2px 5px $color-shadow;
+  width: 90%;
+  height: 90%;
+  grid-row: 1/3;
+  grid-column: 3/4;
+ 
+}
+
+@media screen and (max-width: 1200px) {
+  .card-second-a{
+    grid-column: 1/2;
+  }
+}
+@media  screen and(max-width: 576px) {
+  .card-second-a {
+    margin-top: 20px;
+   height: 350px;
+  }
+}
+
+.card-second-b{
+  align-self: center;
+  justify-self: center;
+  color:$color-second;
+  border-radius: 30px;
+  box-shadow: -2px -2px 5px $color-white, 2px 2px 5px $color-shadow;
+  width: 90%;
+  height: 90%;
+  grid-row: 3/5;
+  grid-column: 3/4;
+ 
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .card-second-b{
+    grid-column: 2/3;
+  }
+}
+@media screen and (max-width: 768px) {
+  .card-second-b{
+   display: none;
+  }
+}
+.card-second-c{
+  align-self: center;
+  justify-self: center;
+  color:$color-second;
+  border-radius: 30px;
+  box-shadow: -2px -2px 5px $color-white, 2px 2px 5px $color-shadow;
+  width: 90%;
+  height: 90%;
+  grid-row: 3/5;
+  grid-column: 3/4;
+ 
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .card-second-c{
+    grid-row: 1/3;
+    grid-column: 2/3;
+  }
+  
+  
+}
+@media screen and (max-width: 768px) {
+  .card-second-c{
+    display: none;
+  }
+  
+  
+}
+
+.payment{
+  //background-image: $color-linear;
+  width: 100%;
+  height: 50%;
+  border-radius: 30px;
+  box-shadow: -2px -2px 5px $color-white, 2px 2px 5px $color-shadow;
+  
+
+}
+.payment p{
+  padding-top: 1.5vw;
+  color: $color-second;
+  font-size: $ruler*1.1;
+ 
+}
+@media  screen and(min-width: 992px) and(max-width: 1200px) {
+  .payment p{
+    font-size: $ruler*1.4 !important;
+  }
+}
+@media  screen and(min-width: 768px) and(max-width: 992px) {
+  .payment p{
+    font-size: $ruler*3 !important;
+  }
+}
+@media  screen and(min-width: 576px) and(max-width: 768px) {
+  .payment p{
+    font-size: $ruler*4 !important;
+  }
+}
+@media  screen and(min-width: 576px) and(max-width: 768px) {
+  .payment img{
+    width: 15% !important;
+    height: 65%;
+  }
+}
+@media  screen and(max-width: 576px) {
+  .payment p{
+    font-size: $ruler*5 !important;
+  }
+}
+@media  screen and(max-width: 576px) {
+  .payment img{
+    width: 20% !important;
+    height: 65%;
+  }
+}
+.payment img{
+  float: left;
+  width: 4vw;
+  margin-top: 0.5vw;
+  margin-left: 1vw;
+  margin-right: 2vw;
+  
+}
+.payment-history h3{
+  padding-top: 1.5vw;
+  padding-bottom: 1.5vw;
+  color: $color-linear;
+  font-size: $ruler*1.1;
+}
+.payment-history-buttons{
+  margin-left: 3vw;
+ 
+  
+}
+.payment-history-buttons button{
+  font-size: 0.8vw;
+  margin:0 0.5vw;
+  width: 5vw;
+}
+@media  screen and(min-width: 992px) and(max-width: 1200px) {
+  .payment-history-buttons button {
+    margin-top: 4vw;
+    margin-right: 0vw;
+    width: 10vw;
+    height: 4vw;
+   
+  }
+}
+@media  screen and(min-width: 768px) and(max-width: 992px) {
+  .payment-history-buttons button {
+    margin-top: 4vw;
+    margin-right: 0vw;
+    width: 10vw;
+    height: 6vw;
+   
+  }
+}
+@media  screen and(min-width: 576px) and(max-width: 768px) {
+  .payment-history-buttons button {
+    margin-top: 4vw;
+    margin-right: 6vw;
+    width: 20vw;
+    height: 8vw;
+   
+  }
+}
+@media  screen and(max-width: 576px) {
+  .payment-history-buttons button {
+    margin-top: 10vw;
+    width: 25vw;
+    height: 10vw;
+  }
+}
+.card-main-left h3{
+  font-size: $ruler;
+}
+
+.bar {
+  float: left;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: -2px -2px 5px $color-white, 2px 2px 5px $color-shadow;
+  overflow: hidden;
+  margin: 1vw;
+}
+@media screen and(min-width: 1200px ) and(max-width: 992px ) {
+  .bar{
+    height: 100px;
+    width: 100px;
+  }
+}
+@media screen and(min-width: 768px ) and(max-width: 1420px ) {
+  .bar{
+    height: 100px;
+    width: 100px;
+  }
+}
+  
+
+.bar:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 80%;
+  width: 80%;
+  border-radius: 50%;
+  box-shadow: inset -2px -2px 5px $color-white, inset 2px 2px 5px $color-shadow;
+}
+svg {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+svg circle {
+  position: absolute;
+  transform: scale(0.939);
+  transform-origin: center;
+  fill: none;
+  stroke: $color-main;
+  stroke-width: 20px;
+  stroke-dasharray: 630px;
+  /* stroke-dashoffset: 630px; */
+}
+@media screen and(max-width: 1420px ) {
+  svg circle{
+    stroke-width: 18px;
+  }
+}
+.bar:nth-child(1) svg circle {
+  animation: bar_1 1s ease forwards;
+}
+.bar:nth-child(2) svg circle {
+  animation: bar_2 1s ease forwards;
+}
+.text-chart {
+  position: absolute;
+  color: $color-second;
+  font-size: $ruler*0.8;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.text-chart span{
+ font-size: $ruler* 1.2;
+}
+/* svg circle {
+	stroke-dashoffset: calc(950 - (950*10) / 100);
+} */
+@keyframes bar_1 {
+  0% {
+    stroke-dashoffset: 630px;
+  }
+  100% {
+    stroke-dashoffset: calc(630px - (630px * 40) / 100);
+  }
+}
+@keyframes bar_2 {
+  0% {
+    stroke-dashoffset: 630px;
+  }
+  100% {
+    stroke-dashoffset: calc(630px - (630px * 40) / 100);
+  }
+}
+.card-main-right h3{
+  margin-top: 1.5vw;
+  margin-left: 1.5vw;
+  font-size: $ruler;
+}
+.tasks{
+  margin: 1vw;
+ 
+}
+.task{
+  margin-bottom: 1vw;
+  float: left;
+}
+.task p{
+  color: $color-second !important;
+  font-size: $ruler*0.9;
+}
+.task p span{
+  font-weight: 600;
+  font-size: $ruler*0.9;
+}
+.tasks button{
+  float: right;
+  margin-left: 1vw;
+  margin-top: 1vw;
+  padding: 5px;
+}
+@media  screen and(min-width: 576px) and(max-width: 768px) {
+  .tasks button, .tasks button i {
+    margin-right: 3vw;
+    padding: 0;
+    padding-left: 10px;
+    font-size: $ruler*4 !important;
+  }
+}
+@media  screen and(max-width: 576px) {
+  .tasks button, .tasks button i {
+    margin-right: 3vw;
+    padding: 0;
+    padding-left: 6px;
+    font-size: $ruler*6 !important;
+  }
+}
+
+.agenda h3{
+  font-size: $ruler;
+  color: $color-second;
+  padding-top: 1vw;
+  padding-left: 1vw;
+  float: left;
+}
+.agenda button{
+  padding: 3px;
+  margin-top: 1vw;
+  float: right;
+  margin-right: 1vw;
+}
+@media  screen and(min-width: 576px) and(max-width: 768px) {
+  .agenda button, .agenda button i {
+    margin-right: 3vw;
+    padding: 0;
+    padding-left: 3px;
+    font-size: $ruler*6 !important;
+  }
+}
+@media  screen and(max-width: 576px) {
+  .agenda button, .agenda button i {
+    margin-right: 3vw;
+    padding: 0;
+    padding-left: 3px;
+    font-size: $ruler*7 !important;
+  }
+}
+.agenda h3 span{
+  font-size: $ruler*1.2;
+}
+.agenda-line{
+  width: 90%;
+  margin-left: 1.25vw;
+  margin-top: 1vw;
+  height: 3px;
+  background-image: $color-linear;
+}
+.agenda-items{
+  padding: 1vw;
+  margin-bottom: 3vw;
+}
+.agenda-item-left{
+  float: left;
+  width: 70%;
+}
+.agenda-item-right{
+  float: right;
+  width: 30%;
+  
+}
+.agenda-item-left p{
+  color: $color-second;
+  font-size: $ruler*0.9 ;
+}
+.agenda-item-left p span{
+  color: $color-second;
+  font-weight: 600;
+}
+.agenda-item-right p{
+  color: $color-second;
+  font-size: $ruler*0.9 ;
+}
+.agenda-item-right p span{
+  color: $color-second;
+  font-weight: 600;
+}
+@media  screen and(min-width: 992px) and(max-width: 1200px) {
+  .agenda-item-left p, .agenda-item-right p, .agenda h3, .agenda h3 span, .task p, .task p span, .card-main-right h3, .card-main-left h3, .text-chart, .text-chart span {
+    font-size: $ruler*1.4 !important;
+  }
+}
+@media  screen and(min-width: 768px) and(max-width: 992px) {
+  .agenda-item-left p, .agenda-item-right p, .agenda h3, .agenda h3 span, .task p, .task p span, .card-main-right h3, .card-main-left h3, .text-chart, .text-chart span {
+    font-size: $ruler*2 !important;
+  }
+}
+@media  screen and(min-width: 576px) and(max-width: 768px) {
+  .agenda-item-left p, .agenda-item-right p, .agenda h3, .agenda h3 span, .task p, .task p span, .card-main-right h3, .card-main-left h3, .text-chart, .text-chart span {
+    font-size: $ruler*3 !important;
+  }
+}
+@media  screen and(max-width: 576px) {
+  .agenda-item-left p, .agenda-item-right p, .agenda h3, .agenda h3 span, .task p, .task p span, .card-main-right h3,.card-main-left h3, .text-chart, .text-chart span {
+    font-size: $ruler*3 !important;
+    margin-top: 2vw;
+  }
+}
+
+.card-second-b video{
+  width: 100%;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+.card-second-b h3{
+  font-size: $ruler* 1.4;
+  
+  color: $color-second;
+  padding-top: 2vw;
+  padding-left: 1vw;
+  
+}
+.card-second-c video{
+  width: 100%;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+.card-second-c h3{
+  font-size: $ruler* 1.4;
+  
+  color: $color-second;
+  padding-top: 2vw;
+  padding-left: 1vw;
+  
+}
+.mobile-links{
+  margin-top: 2vw;
+  margin-left: 2vw;
+}
+.mobile-links a img{
+  width: 45%;
+}
+.news-grid{
+  //height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 140px;
+  grid-template-rows: 50px 1fr 30px ;
+}
+@media  screen and(max-width: 576px) {
+  .news-grid  {
+    grid-template-columns: 1fr ;
+    grid-template-rows: 200px auto 300px 30px ;
+  }
+}
+.news-grid img{
+  
+  grid-column: 1/2;
+  grid-row: 1/4;
+  margin: 10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  
+}
+@media  screen and(max-width: 576px) {
+  .news-grid img {
+    grid-row: 1/2;
+    width: 90vw;
+  }
+}
+
+.news-grid h3{
+  padding: 1vw;
+  color: $color-second;
+  grid-row: 1/2;
+ grid-column: 2/4;
+ font-size: $ruler;
+}
+@media  screen and(min-width: 992px) and(max-width: 1200px) {
+  .news-grid h3 {
+   font-size: $ruler*1.4;
+  }
+}
+@media  screen and(min-width: 768px) and(max-width: 992px) {
+  .news-grid h3 {
+   font-size: $ruler*2;
+  }
+}
+@media  screen and(min-width: 576px) and(max-width: 768px) {
+  .news-grid h3 {
+   font-size: $ruler*3;
+  }
+}
+@media  screen and(max-width: 576px) {
+  .news-grid h3 {
+    margin: 2vw;
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+}
+.news-grid p{
+  padding: 1vw;
+  color: $color-second;
+  grid-row: 2/4;
+  grid-column: 2/5;
+  font-size: $ruler*0.9;
+ }
+
+ @media  screen and(max-width: 576px) {
+  .news-grid p {
+    margin: 2vw;
+    grid-row: 3/4;
+    grid-column: 1/2;
+  }
+}
+ .news-grid a{
+   grid-row: 3/4;
+   grid-column: 4/5 ;
+   font-size: $ruler*0.9;
+   cursor: pointer;
+   font-weight: 600;
+   padding-top: 5px;
+   
+ }
+ .news-grid a i{
+   font-size: $ruler !important;
+ }
+ @media  screen and(min-width: 992px) and(max-width: 1200px) {
+  .news-grid a, .news-grid a i {
+   font-size: $ruler*1.3 !important;
+  }
+}
+@media  screen and(min-width: 768px) and(max-width: 992px) {
+  .news-grid a, .news-grid a i {
+    grid-row: 4/5;
+    margin-top: 1vw;
+   font-size: $ruler*1.6 !important;
+  }
+}
+@media  screen and(min-width: 576px) and(max-width: 768px) {
+  .news-grid a, .news-grid a i {
+    grid-row: 4/5;
+    margin-top: 1vw;
+   font-size: $ruler*2 !important;
+  }
+}
+ @media  screen and(max-width: 576px) {
+  .news-grid a, .news-grid a i {
+    margin-top: -80px;
+    margin-left: 5vw;
+    grid-row: 4/5;
+    grid-column: 1/2;
+  }
+}
+
+ .news-grid span{
+   margin: 1vw;
+   color: $color-second;
+  grid-row: 1/2;
+  grid-column: 4/5 ;
+  font-size: $ruler*0.9;
+ }
+ @media  screen and(min-width: 992px) and(max-width: 1200px) {
+  .news-grid p, .news-grid span, .news-grid span i {
+   font-size: $ruler*1.3 !important;
+  }
+}
+@media  screen and(min-width: 768px) and(max-width: 992px) {
+  .news-grid p, .news-grid span, .news-grid span i {
+    margin-top: 1vw;
+   font-size: $ruler*1.6 !important;
+  }
+}
+@media  screen and(min-width: 576px) and(max-width: 768px) {
+  .news-grid p, .news-grid span, .news-grid span i {
+    margin-top: 1vw;
+   font-size: $ruler*2 !important;
+  }
+}
+@media  screen and(max-width: 576px)  {
+  .news-grid span, .news-grid span i {
+    display: none;
+  }
+}
+
+ @media  screen and(min-width: 992px) and(max-width: 1200px) {
+  .payment-history-buttons button {
+    margin-top: 4vw;
+    margin-right: 0vw;
+    width: 10vw;
+    height: 4vw;
+   
+  }
+}
+@media  screen and(min-width: 768px) and(max-width: 992px) {
+  .payment-history-buttons button {
+    margin-top: 4vw;
+    margin-right: 0vw;
+    width: 10vw;
+    height: 6vw;
+   
+  }
+}
+@media  screen and(min-width: 576px) and(max-width: 768px) {
+  .payment-history-buttons button {
+    margin-top: 4vw;
+    margin-right: 6vw;
+    width: 20vw;
+    height: 8vw;
+   
+  }
+}
+@media  screen and(max-width: 576px) {
+  .news-grid a, .news-grid a i, .news-grid p, .news-grid h3, .news-grid span, .news-grid span i {
+   font-size: $ruler*4 !important;
+  }
+}
+
+ //TabPage filtr
+ .card-second-a h3{
+   padding-top: 2vw;
+   padding-left: 1vw;
+   font-size: $ruler*1.1;
+ }
+ @media  screen and(min-width: 768px) and(max-width: 992px) {
+  .card-second-a h3 {
+    font-size: $ruler*2 !important;
+
+  }
+}
+ @media  screen and(min-width: 576px) and(max-width: 768px) {
+  .card-second-a h3 {
+    font-size: $ruler*3 !important;
+
+  }
+}
+@media  screen and(max-width: 576px)  {
+  .card-second-a h3 {
+    font-size: $ruler*4 !important;
+
+  }
+}
+
+ .label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  
+}
+
+.label-text {
+  margin-left: 16px;
+  color: $color-second;
+}
+
+.toggle {
+  isolation: isolate;
+ 
+  position: relative;
+  height: 1.5vw;
+  width: 3vw;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow:
+    -8px -4px 8px 0px #ffffff,
+    8px 4px 12px 0px #d1d9e6,
+    4px 4px 4px 0px #d1d9e6 inset,
+    -4px -4px 4px 0px #ffffff inset;
+}
+@media  screen and(min-width: 576px) and(max-width: 768px) {
+  .toggle {
+    width: 10vw;
+    height: 3vw;
+    margin-left: 5vw;
+
+  }
+}
+@media  screen and(max-width: 576px)  {
+  .toggle {
+    width: 15vw;
+    height: 6vw;
+    margin-left: 5vw;
+
+  }
+}
+.toggle-state {
+  display: none;
+}
+
+.indicator {
+  
+  height: 100%;
+  width: 200%;
+  background: #ecf0f3;
+  border-radius: 15px;
+  transform: translate3d(-75%, 0, 0);
+  transition: transform 0.4s cubic-bezier(0.85, 0.05, 0.18, 1.35);
+  box-shadow:
+    -8px -4px 8px 0px #ffffff,
+    8px 4px 12px 0px #d1d9e6;
+}
+
+.toggle-state:checked ~ .indicator {
+  transform: translate3d(25%, 0, 0);
+  background-color: $color-main;
+}
+
+.button-filtr{
+  color: $color-second;
+  width: 10vw;
+  margin-top: -10px;
+  margin-left: 5.5vw;
+  padding: 1vw;
+  font-size: $ruler;
+}
+
+@media  screen and(min-width: 576px) and(max-width: 768px) {
+  .button-filtr {
+    margin-top: 4vw;
+    width: 16vw;
+    height: 8vw;
+    
+
+  }
+}
+@media  screen and(max-width: 576px)  {
+  .button-filtr {
+    margin-top: 4vw;
+    width: 20vw;
+    height: 10vw;
+
+  }
+}
+
+@media  screen and(min-width: 576px) and(max-width: 768px) {
+  .card-second-a input {
+    width: 70vw;
+    height: 8vw;
+    margin-left: 5vw;
+
+  }
+}
+@media  screen and(max-width: 576px)  {
+  .card-second-a input {
+    width: 70vw;
+    height: 10vw;
+    margin-left: 5vw;
+
+  }
+}
+@media  screen and(min-width: 576px) and(max-width: 768px) {
+  .card-second-a button i {
+    font-size: $ruler*4 !important;
+
+  }
+}
+@media  screen and(max-width: 576px)  {
+  .card-second-a button i {
+    font-size: $ruler*5 !important;
+
+  }
+}
+
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
