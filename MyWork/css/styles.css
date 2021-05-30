@@ -1,6 +1,9 @@
 @charset "UTF-8";
 
-
+*{
+  font-family:"Poppins";
+  /* background-image: linear-gradient(to right, #dfe9f3 0%, white 100%); */
+}
 
 .glass {
   background-image: linear-gradient(
@@ -52,6 +55,14 @@
   color: #fff;
   text-decoration: none;
 }
+
+.logo{
+  font-size: 3.5vw;
+  font-weight: 600;
+ color:   #031d33 ;
+  
+}
+
 .tablink {
   border: none;
   outline: none;
@@ -70,5 +81,14 @@
   display: none;
   padding: 100px 20px;
   height: 100%;
+}
+
+.nav-tabs, .nav-links{
+  border: 0px solid transparent;
+  
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+  border-color:white ;
+  
 }
 
