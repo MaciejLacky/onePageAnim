@@ -26,8 +26,8 @@
   }
   
   .s1, .s2, .s3, .s4 {
-    background-image: $background-color;
-    
+    //background-image: $background-color;
+    background-image: linear-gradient( to right, #8e9eab 0%, #eef2f3 100%);
     background-size: cover;
     display: grid;
     height: 100vh;
@@ -89,14 +89,29 @@
     text-decoration: none;
   }
   .btn-grad-light{
-    float: right;
-    margin-top: 3vw;
+    position: relative;
+    background-image: $button-color;
+    margin: 10px;
+    padding: 15px 35px;
+    text-align: center;
+    text-transform: uppercase;
     text-decoration: none;
-        font-weight: 600;
-        background: linear-gradient( 135deg, #E8D07A -10%, #5312D6 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 30px;
+    width: 20%;
+    height: 8%;
+    top:10%;
+    left: 73%;
+    
 
+  }
+  .btn-grad-light:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
   }
   .section{
     width: 100vw;

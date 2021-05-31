@@ -60,6 +60,7 @@ body {
   line-height: 1.5;
   color: #212529;
   background: linear-gradient(to right, #fdfbfb 0%, #ebedee 100%);
+  
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -4381,6 +4382,7 @@ textarea.form-control-lg {
 .card-img-top,
 .card-img-bottom {
   width: 100%;
+  height: 40%;
 }
 
 .card-img,
@@ -11019,11 +11021,13 @@ section.resume-section .resume-section-content {
 }
 
 .text-grad{
-  font-size: 1.2vw;
+  font-size: 20px;
         font-weight: 600;
-        background: linear-gradient( to right, #E8D07A -10%, #5312D6 50%);
+        background: linear-gradient( to right, #E8D07A -20%, #5312D6 110%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        float: right;
+
 }
 .text-grad-desc{
  
@@ -11073,17 +11077,25 @@ section.resume-section .resume-section-content {
  
   
 }
-.circle-one{
+.bg{
  
     position:absolute;
-    top:15%;
+    top:0%;
     left: 0%;
     z-index: 0;
-    width: 10%;
-    height: 300%;
-    
-    background-image: linear-gradient( to right, #E8D07A 10%, #5312D6 100%);
+    width: 100%;
+    height: 370%;
+    background-image: linear-gradient( to right, #8e9eab 0%, #eef2f3 100%);
+    filter: blur(200px);
    
+}
+
+.line-grad{
+  width: 50%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  height: 2px;
+  background-image: linear-gradient( 135deg, #E8D07A 10%, #5312D6 100%);
 }
 
 
@@ -11093,7 +11105,7 @@ section.resume-section .resume-section-content {
   text-decoration: none;
 }
 @media (max-width: 992px) {
-  .btn-grad{
+  .btn-grad, .circle-one{
    display: none;
   }
 }
