@@ -612,6 +612,7 @@ progress {
   margin-right: auto;
   margin-left: auto;
   background: linear-gradient(to right, #fdfbfb 0%, #ebedee 100%);
+
 }
 
 @media (min-width: 576px) {
@@ -3867,7 +3868,9 @@ textarea.form-control-lg {
   }
 }
 .nav-link:hover, .nav-link:focus {
-  color: #974a2d;
+  background: linear-gradient( to right, #E8D07A 20%, #5312D6 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .nav-link.disabled {
   color: #6c757d;
@@ -3977,11 +3980,13 @@ textarea.form-control-lg {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+ 
   
 }
 .navbar-nav .nav-link {
   padding-right: 0;
   padding-left: 0;
+  
 }
 .navbar-nav .dropdown-menu {
   position: static;
@@ -4029,6 +4034,8 @@ textarea.form-control-lg {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
+  color: #000000;
+  
 }
 
 .navbar-nav-scroll {
@@ -11029,7 +11036,7 @@ section.resume-section .resume-section-content {
   border-radius: 30px;
   width: 60%;
   height: 6%;
-  
+ 
   
 }
 
@@ -11039,15 +11046,33 @@ section.resume-section .resume-section-content {
   color: #fff;
   text-decoration: none;
 }
+@media (max-width: 992px) {
+  .btn-grad{
+   display: none;
+  }
+}
+.logo{
+  font-size: 3.5vw;
+  font-weight: 600;
+  color: #031d33;
+  text-decoration: none;
+}
+.nav-mobile-icon{
+ font-size: 30px;
+}
 
 .circle-one{
-    position: relative;
-    top:5%;
-    left: -20%;
-    z-index: -1;
-    width: 100%;
-    height: 80%;
-    border-radius: 80% ;
-    background-image: linear-gradient( 135deg, #E8D07A 10%, #5312D6 100%);
-    
+ 
+  position:absolute;
+  top:15%;
+  left: 0%;
+  z-index: 0;
+  width: 10%;
+  height: 500%;
+  
+  background-image: linear-gradient( to right, #E8D07A 10%, #5312D6 100%);
+ 
 }
+
+
+

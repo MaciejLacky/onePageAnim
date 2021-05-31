@@ -6,25 +6,29 @@
 //
 // Scripts
 // 
-function openPage(pageName, elmnt, color) {
-    // Hide all elements with class="tabcontent" by default */
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-  
-    // Remove the background color of all tablinks/buttons
-    tablinks = document.getElementsByClassName("tablink");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].style.backgroundColor = "";
-    }
-  
-    // Show the specific tab content
-    document.getElementById(pageName).style.display = "block";
-  
-    
-  }
-  
-  // Get the element with id="defaultOpen" and click on it
-  document.getElementById("defaultOpen").click();
+
+window.addEventListener('DOMContentLoaded', event => {
+
+    // Activate Bootstrap scrollspy on the main nav element
+    const sideNav = document.body.querySelector('#sideNav');
+    if (sideNav) {
+        new bootstrap.ScrollSpy(document.body, {
+            target: '#sideNav',
+            offset: 74,
+        });
+    };
+
+    // Collapse responsive navbar when toggler is visible
+    const navbarToggler = document.body.querySelector('.navbar-toggler');
+    const responsiveNavItems = [].slice.call(
+        document.querySelectorAll('#navbarResponsive .nav-link')
+    );
+    responsiveNavItems.map(function (responsiveNavItem) {
+        responsiveNavItem.addEventListener('click', () => {
+            if (window.getComputedStyle(navbarToggler).display !== 'none') {
+                navbarToggler.click();
+            }
+        });
+    });
+
+});
