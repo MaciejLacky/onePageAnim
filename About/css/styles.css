@@ -3977,6 +3977,7 @@ textarea.form-control-lg {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+  
 }
 .navbar-nav .nav-link {
   padding-right: 0;
@@ -4091,6 +4092,7 @@ textarea.form-control-lg {
   .navbar-expand-lg {
     flex-wrap: nowrap;
     justify-content: flex-start;
+    
   }
   .navbar-expand-lg .navbar-nav {
     flex-direction: row;
@@ -11036,4 +11038,16 @@ section.resume-section .resume-section-content {
   background-position: right center; /* change the direction of the change here */
   color: #fff;
   text-decoration: none;
+}
+
+.circle-one{
+    position: relative;
+    top:5%;
+    left: -20%;
+    z-index: -1;
+    width: 100%;
+    height: 80%;
+    border-radius: 80% ;
+    background-image: linear-gradient( 135deg, #E8D07A 10%, #5312D6 100%);
+    
 }

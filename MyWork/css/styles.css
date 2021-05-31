@@ -2,7 +2,10 @@
 
 *{
   font-family:"Poppins";
-  /* background-image: linear-gradient(to right, #dfe9f3 0%, white 100%); */
+  
+}
+body{
+  background-image: linear-gradient(to right, #dfe9f3 0%, white 100%);
 }
 
 .glass {
