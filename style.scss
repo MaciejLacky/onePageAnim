@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-size: 1vw;
   }
+
   //colors
  
   $logo-color:  linear-gradient(to right, #000428 0%, #004e92  51%, #000428  100%);
@@ -19,12 +20,34 @@
   $h1-size : 3.5vw;
 
   //main global styles
+  @media screen and (min-width: 992px) and (max-width: 1200px) {
+    *{
+      font-size: 1.2vw;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 992px) {
+    *{
+      font-size: 1.5vw;
+    }
+  }
+  @media screen and (min-width: 576px) and (max-width: 768px) {
+    *{
+      font-size: 2vw;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    *{
+      font-size: 4vw;
+      $h1-size : 4.5vw;
+    }
+    
+  }
 
   
   body {
     font-family: "Poppins", sans-serif;
   }
-  
+
   .s1, .s2, .s3, .s4 {
     //background-image: $background-color;
     background-image: linear-gradient( to right, #8e9eab 0%, #eef2f3 100%);
@@ -67,7 +90,7 @@
    .btn-grad {
     background-image: $button-color;
     margin: 10px;
-    padding: 15px 45px;
+    padding: 15px 35px;
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
@@ -117,7 +140,37 @@
     width: 100vw;
     height: 100vh;
   }
-
+  @media screen and (min-width: 992px) and (max-width: 1200px) {
+    .btn-grad{
+      width: 25%;
+      padding-top: 4%;
+    }
+    .btn-grad-light{
+      left:55%;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 992px) {
+    .btn-grad{
+      width: 28%;
+      padding-top: 4%;
+    }
+    .btn-grad-light{
+      left:60%;
+    }
+  }
+  @media screen and (min-width: 576px) and (max-width: 768px) {
+    .btn-grad{
+      width: 25%;
+      padding-top: 4%;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    .btn-grad{
+      width: 28%;
+      padding-top: 4%;
+    }
+    
+  }
   .s1, .s2, .s3, .s4{
     
     grid-template-columns: 1fr  1fr;

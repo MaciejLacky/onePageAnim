@@ -5,6 +5,30 @@
   font-size: 1vw;
 }
 
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  * {
+    font-size: 1.2vw;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  * {
+    font-size: 1.5vw;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  * {
+    font-size: 2vw;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  * {
+    font-size: 4vw;
+  }
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -40,7 +64,7 @@ body {
 .btn-grad {
   background-image: linear-gradient(to right, #000000 0%, #434343 51%, #000000 100%);
   margin: 10px;
-  padding: 15px 45px;
+  padding: 15px 35px;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
@@ -89,6 +113,40 @@ body {
 .section {
   width: 100vw;
   height: 100vh;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .btn-grad {
+    width: 25%;
+    padding-top: 4%;
+  }
+  .btn-grad-light {
+    left: 55%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .btn-grad {
+    width: 28%;
+    padding-top: 4%;
+  }
+  .btn-grad-light {
+    left: 60%;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .btn-grad {
+    width: 25%;
+    padding-top: 4%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .btn-grad {
+    width: 28%;
+    padding-top: 4%;
+  }
 }
 
 .s1, .s2, .s3, .s4 {
