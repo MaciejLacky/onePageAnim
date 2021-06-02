@@ -11087,3 +11087,9 @@ section.resume-section .resume-section-content {
   }
 }
 
+@media (max-width: 992px) {
+  nav .download{
+   display: none;
+  }
+}
+
